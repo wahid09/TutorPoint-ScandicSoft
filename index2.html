@@ -1,1197 +1,917 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-		<meta charset="UTF-8">
-		<!-- For IE -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- For Resposive Device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TutorPoint</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/icon.png">
+    <!-- Main style sheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- responsive style sheet -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+</head>
 
-		<!-- For Resposive Device -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<title>TutorPoint</title>
-
-		<!-- Favicon -->
-		<link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/icon.png">
-
-
-		<!-- Main style sheet -->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<!-- responsive style sheet -->
-		<link rel="stylesheet" type="text/css" href="css/responsive.css">
-			
-	</head>
-
-	<body>
-		<div class="main-page-wrapper">
-
-
-			<!-- Header _________________________________ -->
-			<header class="inner-header">
-
-
-				<div class="top-header">
-					<div class="container">
-						<div class="left-side float-left">
-							<ul>
-								<li><span class="icon round-border"><i class="ficon flaticon-signs"></i></span> <a href="#" class="tran3s">45/12 Best Avenue Street, UK 2450, US</a></li>
-								<li><span class="icon round-border"><i class="ficon flaticon-multimedia"></i></span> <a href="#" class="tran3s">info@softscandic.com</a></li>
-								<li><span class="icon round-border"><i class="ficon flaticon-technology"></i></span> <a href="#" class="tran3s">+8801712570051</a></li>
-								<li><span class="icon round-border"><i class="ficon flaticon-translation"></i></span>
-									<select class="selectpicker">
-										<option>English</option>
-										<option>Spanish</option>
-										<option>L'italiano</option>
-									</select>
-								</li>
-							</ul>
-						</div> <!-- /.left-side -->
-						<div class="right-side float-right">
-							<ul>
-								<li><a href="#" class="tran3s round-border icon"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-		        				<li><a href="#" class="tran3s round-border icon"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a href="#" class="tran3s round-border icon"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								<li><a href="#" class="tran3s round-border icon"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-							</ul>
-						</div> <!-- /.right-side -->
-					</div>
-				</div> <!-- /.top-header -->
-
-				<!-- _______________________ Theme Menu _____________________ -->
-
-				<div class="container">
-					<div class="main-menu-wrapper clear-fix">
-						<div class="container">
-							<div class="logo float-left"><a href="index.html" style="vertical-align:middle;"><img src="images/logo/logo.png" alt="LOGO"></a></div>
-
-							<!-- Menu -->
-							<nav class="navbar float-right">
-							   <!-- Brand and toggle get grouped for better mobile display -->
-							   <div class="navbar-header">
-							     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-							       <span class="sr-only">Toggle navigation</span>
-							       <span class="icon-bar"></span>
-							       <span class="icon-bar"></span>
-							       <span class="icon-bar"></span>
-							     </button>
-							   </div>
-							   <!-- Collect the nav links, forms, and other content for toggling -->
-							   <div class="collapse navbar-collapse" id="navbar-collapse-1">
-							     <ul class="nav navbar-nav">
-							       <li class="dropdown-holder current-page-item"><a href="index.html">Home</a>
-										<ul class="sub-menu">
-											<li><a href="index.html" class="tran3s">Home Version One</a></li>
-										</ul>
-							       </li>
-							       <li class="dropdown-holder"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Search Tutors</a>
-							       </li>
-							       <li class="dropdown-holder"><a href="#">Request a Tutor</a>
-							       </li>
-							       <li class="dropdown-holder"><a href="#">Premium Tutors</a>
-							       </li>
-							       
-							       <li class="dropdown-holder"><a href="#">Tutions</a>
-							       	
-							       </li>
-							       <li class="dropdown-holder"><a href="#">Join us</a>
-							       	
-							       </li>
-							       <li><a href="contact-us.html">contact</a></li>
-							     </ul>
-							   </div><!-- /.navbar-collapse -->
-							</nav>
-						</div>
-					</div> <!-- /.main-menu-wrapper -->
-				</div>
-			</header>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">SEARCH FOR TUTORS</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-                                    <div class="form-group col-md-6">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>All District</option>
-                                            <option>...</option>
-                                            </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>All Areas</option>
-                                            <option>...</option>
-                                            </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>All Subject</option>
-                                            <option>...</option>
-                                            </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>All Medium</option>
-                                            <option>...</option>
-                                            </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>All Subjects</option>
-                                            <option>...</option>
-                                            </select>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <button type="submit" class="btn btn-primary form-control">Search Tutor</button>
-                                    </div>
-
-
-                                </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-			<!-- Theme Banner ________________________________ -->
-			<div id="banner">
-	        	<div class="rev_slider_wrapper">
-					<!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
-						<div id="main-banner-slider" class="rev_slider" data-version="5.0.7">
-							<ul>
-
-								<!-- SLIDE1  -->
-								<li data-index="rs-280" data-transition="zoomout" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-rotate="0"  data-saveperformance="off"  data-title="Title Goes Here" data-description="">
-									<!-- MAIN IMAGE -->
-									<img src="images/home/slide-2.jpg"  alt="image"  class="rev-slidebg" data-bgparallax="3" data-bgposition="center center" data-duration="20000" data-ease="Linear.easeNone" data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0" data-rotateend="0" data-rotatestart="0" data-scaleend="100" data-scalestart="140">
-									<!-- LAYERS -->
-
-									<!-- LAYER NR. 1 -->
-									<div class="tp-caption" 
-										data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['-56','-56','-36','-150']" 
-										data-width="none"
-										data-height="none"
-										data-whitespace="nowrap"
-										data-transform_idle="o:1;"
-							 
-										data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-										data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-										data-mask_in="x:0px;y:[100%];" 
-										data-mask_out="x:inherit;y:inherit;" 
-										data-start="1000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										style="z-index: 6; white-space: nowrap;">
-										<h5>for hundreds of successful student here </h5>
-									</div>
-
-									<!-- LAYER NR. 2 -->
-									<div class="tp-caption" 
-										data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['20','20','45','-85']"
-										data-width="none"
-										data-height="none"
-										data-whitespace="nowrap"
-										data-transform_idle="o:1;"
-							 
-										data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-										data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-										data-mask_in="x:0px;y:[100%];" 
-										data-mask_out="x:inherit;y:inherit;" 
-										data-start="2000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										style="z-index: 6; white-space: nowrap;">
-										<h1 class="center-item">Meet your new <span class="p-color">community</span> <br>Learn education</h1>
-									</div>
-
-
-									<!-- LAYER NR. 3 -->
-									<div class="tp-caption"
-										data-x="['center','center','center','center']" data-hoffset="['-87','-87','-87','0']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['205','205','210','80']"
-										data-transform_idle="o:1;"
-										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-										data-transform_in="x:[-100%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2500;e:Power3.easeInOut;" 
-										data-transform_out="auto:auto;s:1000;e:Power2.easeInOut;" 
-										data-start="3000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on">
-										<a href="course-v1.html" class="course-button">View courses</a>
-									</div>
-									
-									<!-- LAYER NR. 4 -->
-									<div class="tp-caption"
-										data-x="['center','center','center','center']" data-hoffset="['105','105','105','0']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['205','205','210','155']"
-										data-transform_idle="o:1;"
-										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-										data-transform_in="x:[100%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2500;e:Power3.easeInOut;" 
-										data-transform_out="auto:auto;s:1000;e:Power2.easeInOut;" 
-										data-start="3000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on">
-										<a href="contact-us.html" class="buy-button p-color-bg">BUY NOW</a>
-									</div>
-								
-								</li>
-
-
-								<!-- SLIDE2  -->
-								<li data-index="rs-18" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="images/home/slide-1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Title Goes Here" data-description="">
-									<!-- MAIN IMAGE -->
-									<img src="images/home/slide-1.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-									<!-- LAYERS -->
-
-									<!-- LAYER NR. 1 -->
-									<div class="tp-caption" 
-										data-x="['left','left','left','left']" data-hoffset="['0','25','35','15']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['-56','-56','-45','-150']" 
-										data-width="none"
-										data-height="none"
-										data-whitespace="nowrap"
-										data-transform_idle="o:1;"
-							 
-										data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-										data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-										data-mask_in="x:0px;y:[100%];" 
-										data-mask_out="x:inherit;y:inherit;" 
-										data-start="1000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										style="z-index: 6; white-space: nowrap;">
-										<h5>for hundreds of successful student here </h5>
-									</div>
-
-									<!-- LAYER NR. 2 -->
-									<div class="tp-caption" 
-										data-x="['left','left','left','left']" data-hoffset="['0','25','35','15']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['20','25','30','-85']"
-										data-width="none"
-										data-height="none"
-										data-whitespace="nowrap"
-										data-transform_idle="o:1;"
-							 
-										data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-										data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-										data-mask_in="x:0px;y:[100%];" 
-										data-mask_out="x:inherit;y:inherit;" 
-										data-start="2000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										style="z-index: 6; white-space: nowrap;">
-										<h1>Education is a <span class="p-color">backbone</span> <br>of life</h1>
-									</div>
-
-
-									<!-- LAYER NR. 3 -->
-									<div class="tp-caption"
-										data-x="['left','left','left','left']" data-hoffset="['0','25','35','15']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['205','205','210','80']"
-										data-transform_idle="o:1;"
-										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-										data-transform_in="x:[-100%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2500;e:Power3.easeInOut;" 
-										data-transform_out="auto:auto;s:1000;e:Power2.easeInOut;" 
-										data-start="3000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on">
-										<a href="course-v1.html" class="course-button">View courses</a>
-									</div>
-									
-									<!-- LAYER NR. 4 -->
-									<div class="tp-caption"
-										data-x="['left','left','left','left']" data-hoffset="['192','217','227','15']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['205','205','210','155']"
-										data-transform_idle="o:1;"
-										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-										data-transform_in="x:[100%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2500;e:Power3.easeInOut;" 
-										data-transform_out="auto:auto;s:1000;e:Power2.easeInOut;" 
-										data-start="3000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on">
-										<a href="contact-us.html" class="buy-button p-color-bg">BUY NOW</a>
-									</div>
-								</li>
-
-							
-								<!-- SLIDE3  -->
-								<li data-index="rs-20" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="images/home/slide-5.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Title Goes Here" data-description="">
-									<!-- MAIN IMAGE -->
-									<img src="images/home/slide-5.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 -500" data-offsetend="0 500" data-bgparallax="10" class="rev-slidebg" data-no-retina>
-									<!-- LAYERS -->
-
-									<!-- LAYER NR. 1 -->
-									<div class="tp-caption" 
-										data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['-56','-56','-36','-150']" 
-										data-width="none"
-										data-height="none"
-										data-whitespace="nowrap"
-										data-transform_idle="o:1;"
-							 
-										data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-										data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-										data-mask_in="x:0px;y:[100%];" 
-										data-mask_out="x:inherit;y:inherit;" 
-										data-start="1000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										style="z-index: 6; white-space: nowrap;">
-										<h5>for hundreds of successful student here </h5>
-									</div>
-
-									<!-- LAYER NR. 2 -->
-									<div class="tp-caption" 
-										data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['20','20','45','-85']"
-										data-width="none"
-										data-height="none"
-										data-whitespace="nowrap"
-										data-transform_idle="o:1;"
-							 
-										data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
-										data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-										data-mask_in="x:0px;y:[100%];" 
-										data-mask_out="x:inherit;y:inherit;" 
-										data-start="2000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										style="z-index: 6; white-space: nowrap;">
-										<h1 class="center-item">Meet your new <span class="p-color">community</span> <br>Learn education</h1>
-									</div>
-
-
-									<!-- LAYER NR. 3 -->
-									<div class="tp-caption"
-										data-x="['center','center','center','center']" data-hoffset="['-87','-87','-87','0']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['205','205','210','80']"
-										data-transform_idle="o:1;"
-										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-										data-transform_in="x:[-100%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2500;e:Power3.easeInOut;" 
-										data-transform_out="auto:auto;s:1000;e:Power2.easeInOut;" 
-										data-start="3000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on">
-										<a href="course-v1.html" class="course-button">View courses</a>
-									</div>
-									
-									<!-- LAYER NR. 4 -->
-									<div class="tp-caption"
-										data-x="['center','center','center','center']" data-hoffset="['105','105','105','0']" 
-										data-y="['middle','middle','middle','middle']" data-voffset="['205','205','210','155']"
-										data-transform_idle="o:1;"
-										data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;"
-										data-transform_in="x:[100%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2500;e:Power3.easeInOut;" 
-										data-transform_out="auto:auto;s:1000;e:Power2.easeInOut;" 
-										data-start="3000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on">
-										<a href="contact-us.html" class="buy-button p-color-bg">BUY NOW</a>
-									</div>
-								</li>
-							</ul>	
-						</div>
-					</div><!-- END REVOLUTION SLIDER -->
-	        </div> <!--  /#banner -->
-
-
-	        <!-- Manage Section _________________________ 
-	        <div class="theme-manage-area">
-	        	<div class="container">
-	        		<div class="item-part float-left item1 p-color-bg">
-	        			<div class="search-top">
-                                <h4>SEARCH FOR TUTORS</h4>
-                                <p>Find a great tutor in your area.</p>
+<body>
+    <div class="main-page-wrapper">
+        <!-- Header _________________________________ -->
+        <header class="inner-header">
+            <div class="top-header">
+                <div class="container">
+                    <div class="left-side float-left">
+                        <ul>
+                            <li><span class="icon round-border"><i class="ficon flaticon-signs"></i></span> <a href="#" class="tran3s">45/12 Best Avenue Street, UK 2450, US</a></li>
+                            <li><span class="icon round-border"><i class="ficon flaticon-multimedia"></i></span> <a href="#" class="tran3s">info@softscandic.com</a></li>
+                            <li><span class="icon round-border"><i class="ficon flaticon-technology"></i></span> <a href="#" class="tran3s">+8801712570051</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.left-side -->
+                    <div class="right-side float-right">
+                        <ul>
+                            <li><a href="#" class="tran3s round-border icon"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#" class="tran3s round-border icon"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#" class="tran3s round-border icon"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#" class="tran3s round-border icon"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.right-side -->
+                </div>
+            </div>
+            <!-- /.top-header -->
+            <!-- _______________________ Theme Menu _____________________ -->
+            <div class="container">
+                <div class="main-menu-wrapper clear-fix">
+                    <div class="container">
+                        <div class="logo float-left"><a href="index.html" style="vertical-align:middle;"><img src="images/logo/logo.png" alt="LOGO"></a></div>
+                        <!-- Menu -->
+                        <nav class="navbar float-right">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
                             </div>
-	        			<form>
-                                    <div class="form-group col-md-6">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>All District</option>
-                                            <option>...</option>
-                                            </select>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown-holder current-page-item"><a href="index.html">Home</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="index.html" class="tran3s">Home Version One</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-holder"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Search Tutors</a>
+                                    </li>
+                                    <li class="dropdown-holder"><a href="#">Request a Tutor</a>
+                                    </li>
+                                    <li class="dropdown-holder"><a href="#">Premium Tutors</a>
+                                    </li>
+                                    <li class="dropdown-holder"><a href="#">Tutions</a>
+                                    </li>
+                                    <li class="dropdown-holder"><a href="#">Join us</a>
+                                    </li>
+                                    <li><a href="contact-us.html">contact</a></li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </nav>
+                    </div>
+                </div>
+                <!-- /.main-menu-wrapper -->
+            </div>
+        </header>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">SEARCH FOR TUTORS</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group col-md-6">
+                                <select id="inputState" class="form-control">
+                                    <option selected>All District</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <select id="inputState" class="form-control">
+                                    <option selected>All Areas</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <select id="inputState" class="form-control">
+                                    <option selected>All Subject</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <select id="inputState" class="form-control">
+                                    <option selected>All Medium</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <select id="inputState" class="form-control">
+                                    <option selected>All Subjects</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <button type="submit" class="btn btn-primary form-control">Search Tutor</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Theme Banner ________________________________ -->
+        <div id="banner">
+            <div class="rev_slider_wrapper">
+                <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
+                <div id="main-banner-slider" class="rev_slider" data-version="5.0.7">
+                    <ul>
+                        <!-- SLIDE1  -->
+                        <li data-index="rs-280" data-transition="zoomout" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-rotate="0" data-saveperformance="off" data-title="Title Goes Here" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/home/slide-2.jpg" alt="image" class="rev-slidebg" data-bgparallax="3" data-bgposition="center center" data-duration="20000" data-ease="Linear.easeNone" data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0" data-rotateend="0" data-rotatestart="0" data-scaleend="100" data-scalestart="140">
+                            <!-- LAYERS -->
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-56','-56','-36','-150']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: nowrap;">
+                                <h5>for hundreds of successful student here </h5>
+                            </div>
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['20','20','45','-85']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="2000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: nowrap;">
+                                <h1 class="center-item">Meet your new <span class="p-color">Tutor</span> <br>Learn education</h1>
+                            </div>
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption" data-x="['center','center','center','center']" data-hoffset="['-87','-87','-87','0']" data-y="['middle','middle','middle','middle']" data-voffset="['205','205','210','80']" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-transform_in="x:[-100%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power2.easeInOut;" data-start="3000" data-splitin="none" data-splitout="none" data-responsive_offset="on">
+                                <a href="#" class="course-button">View Profile</a>
+                            </div>
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption" data-x="['center','center','center','center']" data-hoffset="['105','105','105','0']" data-y="['middle','middle','middle','middle']" data-voffset="['205','205','210','155']" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-transform_in="x:[100%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power2.easeInOut;" data-start="3000" data-splitin="none" data-splitout="none" data-responsive_offset="on">
+                                <a href="#" class="buy-button p-color-bg">Hire him</a>
+                            </div>
+                        </li>
+                        <!-- SLIDE2  -->
+                        <li data-index="rs-280" data-transition="zoomout" data-slotamount="default" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-rotate="0" data-saveperformance="off"data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/home/slide-1.jpg" alt="image" class="rev-slidebg" data-bgparallax="3" data-bgposition="center center" data-duration="20000" data-ease="Linear.easeNone" data-kenburns="on" data-no-retina="" data-offsetend="0 0" data-offsetstart="0 0" data-rotateend="0" data-rotatestart="0" data-scaleend="100" data-scalestart="140">
+                            <!-- LAYERS -->
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-56','-56','-36','-150']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: nowrap;">
+                                <h5>for hundreds of successful student here </h5>
+                            </div>
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['20','20','45','-85']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:[100%];" data-mask_out="x:inherit;y:inherit;" data-start="2000" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: nowrap;">
+                                <h1 class="center-item">Meet your new <span class="p-color">Tutor</span> <br>Learn education</h1>
+                            </div>
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption" data-x="['center','center','center','center']" data-hoffset="['-87','-87','-87','0']" data-y="['middle','middle','middle','middle']" data-voffset="['205','205','210','80']" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-transform_in="x:[-100%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power2.easeInOut;" data-start="3000" data-splitin="none" data-splitout="none" data-responsive_offset="on">
+                                <a href="#" class="course-button">View Profile</a>
+                            </div>
+                            <!-- LAYER NR. 4 -->
+                            <div class="tp-caption" data-x="['center','center','center','center']" data-hoffset="['105','105','105','0']" data-y="['middle','middle','middle','middle']" data-voffset="['205','205','210','155']" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-transform_in="x:[100%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2500;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;e:Power2.easeInOut;" data-start="3000" data-splitin="none" data-splitout="none" data-responsive_offset="on">
+                                <a href="#" class="buy-button p-color-bg">Hire him</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END REVOLUTION SLIDER -->
+        </div>
+        <!--  /#banner -->
+        <!-- Featured Tutors _______________________ -->
+        <div class="event-section wow fadeInUp">
+            <div class="container">
+                <div class="theme-title">
+                    <h2>Featured Tutors</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
+                        <div class="single-event theme-bg-color">
+                            <div class="date p-color">
+                                <img src="images/user/1.png" class="user-image" alt="">
+                            </div>
+                            <a href="">
+                                <h6>Tutor name</h6>
+                            </a>
+                            <p>3000/Month</p>
+                            <p>01765153253</p>
+                            <p>Dhaka</p>
+                        </div>
+                        <!-- /.single-event -->
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
+                        <div class="single-event theme-bg-color">
+                            <div class="date p-color">
+                                <img src="images/user/1.png" class="user-image" alt="">
+                            </div>
+                            <a href="">
+                                <h6>Tutor name</h6>
+                            </a>
+                            <p>3000/Month</p>
+                            <p>01765153253</p>
+                            <p>Dhaka</p>
+                        </div>
+                        <!-- /.single-event -->
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
+                        <div class="single-event theme-bg-color">
+                            <div class="date p-color">
+                                <img src="images/user/1.png" class="user-image" alt="">
+                            </div>
+                            <a href="">
+                                <h6>Tutor name</h6>
+                            </a>
+                            <p>3000/Month</p>
+                            <p>01765153253</p>
+                            <p>Dhaka</p>
+                        </div>
+                        <!-- /.single-event -->
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
+                        <div class="single-event theme-bg-color">
+                            <div class="date p-color">
+                                <img src="images/user/1.png" class="user-image" alt="">
+                            </div>
+                            <a href="">
+                                <h6>Tutor name</h6>
+                            </a>
+                            <p>3000/Month</p>
+                            <p>01765153253</p>
+                            <p>Dhaka</p>
+                        </div>
+                        <!-- /.single-event -->
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
+                        <div class="single-event theme-bg-color">
+                            <div class="date p-color">
+                                <img src="images/user/1.png" class="user-image" alt="">
+                            </div>
+                            <a href="">
+                                <h6>Tutor name</h6>
+                            </a>
+                            <p>3000/Month</p>
+                            <p>01765153253</p>
+                            <p>Dhaka</p>
+                        </div>
+                        <!-- /.single-event -->
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
+                        <div class="single-event theme-bg-color">
+                            <div class="date p-color">
+                                <img src="images/user/1.png" class="user-image" alt="">
+                            </div>
+                            <a href="">
+                                <h6>Tutor name</h6>
+                            </a>
+                            <p>3000/Month</p>
+                            <p>01765153253</p>
+                            <p>Dhaka</p>
+                        </div>
+                        <!-- /.single-event -->
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.Featured Tutors -->
+
+        <!-- Information Banner _______________________ -->
+        <div class="information-banner">
+            <div class="container">
+                <h3>Information for teachers and students, Event information</h3>
+                <h6>ONE OF THE MOST COMPLETE Education THEME</h6>
+                <a href="#" class="p-color-bg tran3s wow fadeInUp">Contact us</a>
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.information-banner -->
+        <!-- Popular Course _________________________ -->
+        <div class="popular-course wow fadeInUp theme-bg-color mFix">
+            <div class="container">
+                <h2>POPULAR COURSES</h2>
+                <div class="row">
+                    <div class="theme-slider course-item-wrapper">
+                        <div class="item hvr-float-shadow">
+                            <div class="img-holder"><img src="images/home/2.jpg" alt="Image"></div>
+                            <div class="text">
+                                <h4><a href="course-details.html">web development courses</a></h4>
+                                <div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
+                                <h6>Mahfuz riad</h6>
+                                <ul>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                </ul>
+                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
+                                <div class="clear-fix">
+                                    <ul class="float-left">
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
+                                        <li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
+                                    </ul>
+                                    <a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
+                                </div>
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.item -->
+                        <div class="item hvr-float-shadow">
+                            <div class="img-holder"><img src="images/home/3.jpg" alt="Image"></div>
+                            <div class="text">
+                                <h4><a href="course-details.html">Learn Basic German Fast</a></h4>
+                                <div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
+                                <h6>Mahfuz riad</h6>
+                                <ul>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                </ul>
+                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
+                                <div class="clear-fix">
+                                    <ul class="float-left">
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
+                                        <li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
+                                    </ul>
+                                    <a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
+                                </div>
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.item -->
+                        <div class="item hvr-float-shadow">
+                            <div class="img-holder"><img src="images/home/4.jpg" alt="Image"></div>
+                            <div class="text">
+                                <h4><a href="course-details.html">basic time use properly</a></h4>
+                                <div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
+                                <h6>Mahfuz riad</h6>
+                                <ul>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                </ul>
+                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
+                                <div class="clear-fix">
+                                    <ul class="float-left">
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
+                                        <li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
+                                    </ul>
+                                    <a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
+                                </div>
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.item -->
+                        <div class="item hvr-float-shadow">
+                            <div class="img-holder"><img src="images/home/3.jpg" alt="Image"></div>
+                            <div class="text">
+                                <h4><a href="course-details.html">Learn Basic German Fast</a></h4>
+                                <div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
+                                <h6>Mahfuz riad</h6>
+                                <ul>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                </ul>
+                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
+                                <div class="clear-fix">
+                                    <ul class="float-left">
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
+                                        <li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
+                                    </ul>
+                                    <a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
+                                </div>
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.item -->
+                        <div class="item hvr-float-shadow">
+                            <div class="img-holder"><img src="images/home/2.jpg" alt="Image"></div>
+                            <div class="text">
+                                <h4><a href="course-details.html">web development courses</a></h4>
+                                <div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
+                                <h6>Mahfuz riad</h6>
+                                <ul>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                </ul>
+                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
+                                <div class="clear-fix">
+                                    <ul class="float-left">
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
+                                        <li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
+                                    </ul>
+                                    <a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
+                                </div>
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.item -->
+                        <div class="item hvr-float-shadow">
+                            <div class="img-holder"><img src="images/home/4.jpg" alt="Image"></div>
+                            <div class="text">
+                                <h4><a href="course-details.html">basic time use properly</a></h4>
+                                <div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
+                                <h6>Mahfuz riad</h6>
+                                <ul>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                </ul>
+                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
+                                <div class="clear-fix">
+                                    <ul class="float-left">
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
+                                        <li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
+                                    </ul>
+                                    <a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
+                                </div>
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.item -->
+                        <div class="item hvr-float-shadow">
+                            <div class="img-holder"><img src="images/home/3.jpg" alt="Image"></div>
+                            <div class="text">
+                                <h4><a href="course-details.html">Learn Basic German Fast</a></h4>
+                                <div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
+                                <h6>Mahfuz riad</h6>
+                                <ul>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                </ul>
+                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
+                                <div class="clear-fix">
+                                    <ul class="float-left">
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
+                                        <li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
+                                    </ul>
+                                    <a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
+                                </div>
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.item -->
+                        <div class="item hvr-float-shadow">
+                            <div class="img-holder"><img src="images/home/2.jpg" alt="Image"></div>
+                            <div class="text">
+                                <h4><a href="course-details.html">web development courses</a></h4>
+                                <div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
+                                <h6>Mahfuz riad</h6>
+                                <ul>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                                </ul>
+                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
+                                <div class="clear-fix">
+                                    <ul class="float-left">
+                                        <li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
+                                        <li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
+                                    </ul>
+                                    <a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
+                                </div>
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.item -->
+                    </div>
+                    <!-- /.course-slider -->
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.popular-course -->
+        <!-- Testimonial And FAQ Section _________________________ -->
+        <div class="test-faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 testimonial wow fadeInLeft float-right">
+                        <div class="wrapper">
+                            <h3>TESTIMONIALS</h3>
+                            <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#testimonial-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#testimonial-carousel" data-slide-to="1"></li>
+                                    <li data-target="#testimonial-carousel" data-slide-to="2"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <div class="single-box theme-bg-color">
+                                            <div class="img round-border"><img src="images/home/2.png" alt="Image"></div>
+                                            <h6>ghost riad <span>(Sir.Principal)</span></h6>
+                                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
+                                        </div>
+                                        <!-- /.single-box -->
+                                        <div class="single-box theme-bg-color">
+                                            <div class="img round-border"><img src="images/home/3.png" alt="Image"></div>
+                                            <h6>Masum nodi <span>(Sir.Principal Fohinni)</span></h6>
+                                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
+                                        </div>
+                                        <!-- /.single-box -->
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>All Areas</option>
-                                            <option>...</option>
-                                            </select>
+                                    <div class="item">
+                                        <div class="single-box theme-bg-color">
+                                            <div class="img round-border"><img src="images/home/2.png" alt="Image"></div>
+                                            <h6>ghost riad <span>(Sir.Principal)</span></h6>
+                                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
+                                        </div>
+                                        <!-- /.single-box -->
+                                        <div class="single-box theme-bg-color">
+                                            <div class="img round-border"><img src="images/home/3.png" alt="Image"></div>
+                                            <h6>Masum nodi <span>(Sir.Principal Fohinni)</span></h6>
+                                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
+                                        </div>
+                                        <!-- /.single-box -->
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>All Subject</option>
-                                            <option>...</option>
-                                            </select>
+                                    <div class="item">
+                                        <div class="single-box theme-bg-color">
+                                            <div class="img round-border"><img src="images/home/2.png" alt="Image"></div>
+                                            <h6>ghost riad <span>(Sir.Principal)</span></h6>
+                                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
+                                        </div>
+                                        <!-- /.single-box -->
+                                        <div class="single-box theme-bg-color">
+                                            <div class="img round-border"><img src="images/home/3.png" alt="Image"></div>
+                                            <h6>Masum nodi <span>(Sir.Principal Fohinni)</span></h6>
+                                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
+                                        </div>
+                                        <!-- /.single-box -->
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>All Medium</option>
-                                            <option>...</option>
-                                            </select>
+                                </div>
+                            </div>
+                            <!-- /#testimonial-carousel -->
+                        </div>
+                        <!-- /.wrapper -->
+                    </div>
+                    <!-- /.testimonial -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 faq wow fadeInRight float-left">
+                        <div class="wrapper">
+                            <h3>Frequently Asked Questions</h3>
+                            <!-- ________________ Panel _______________ -->
+                            <div class="faq_panel">
+                                <div class="panel-group theme-accordion" id="accordion">
+                                    <div class="panel">
+                                        <div class="panel-heading active-panel">
+                                            <h6 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                                    Smart Learning is an education platform partners</a>
+                                            </h6>
+                                        </div>
+                                        <div id="collapse1" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempo- ra incidunt ut labore et dolore magnam aliquam quaerat voluptatem Nemo enim ipsam voluptatem</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <select id="inputState" class="form-control">
-                                            <option selected>All Subjects</option>
-                                            <option>...</option>
-                                            </select>
+                                    <!-- /panel 1 -->
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h6 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                                    Education of Tomorrow, Rooted in Tradition</a>
+                                            </h6>
+                                        </div>
+                                        <div id="collapse2" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem Nemo enim ipsam voluptatem</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="form-group col-md-4">
-                                        <button type="submit" class="btn btn-primary form-control">Search Tutor</button>
+                                    <!-- /panel 2 -->
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h6 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+                                            </h6>
+                                        </div>
+                                        <div id="collapse3" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem Nemo enim ipsam voluptatem</p>
+                                            </div>
+                                        </div>
                                     </div>
-
-
-                                </form>
-	        		</div>
-	        		<div class="item-part float-right item2">
-	        			<img src="images/home/1.jpg" alt="Image">
-	        			<div class="opacity">
-	        				<div id="theme-manage-carousel" class="carousel slide" data-ride="carousel">
-							    <!-- Indicators
-							  <ol class="carousel-indicators">
-							    <li data-target="#theme-manage-carousel" data-slide-to="0" class="active"></li>
-							    <li data-target="#theme-manage-carousel" data-slide-to="1"></li>
-							    <li data-target="#theme-manage-carousel" data-slide-to="2"></li>
-							  </ol>
-							  <!-- Wrapper for slides
-							  <div class="carousel-inner" role="listbox">
-							    <div class="item active">
-							      	<h3>15 year reputatuion</h3>
-							      	<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione </p>
-							    </div> <!-- /.item 
-
-							    <div class="item">
-							      	<h3>15 year reputatuion</h3>
-							      	<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione </p>
-							    </div> <!-- /.item 
-
-							    <div class="item">
-							      	<h3>15 year reputatuion</h3>
-							      	<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione </p>
-							    </div> <!-- /.item 
-							    
-							</div>
-							</div> <!-- /#theme-manage-carousel 
-	        			</div>
-	        		</div>
-	        		<div class="item-part float-left item1 p-color-bg">
-	        			<h3><i class="fa fa-book" aria-hidden="true"></i> BOOK LIBRARY</h3>
-	        			<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequun- tur magni dolores eos qui ratione </p>
-	        			<a href="course-details.html" class="tran3s">Rede more <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-	        		</div>
-	        	</div> <!-- /.container 
-	        </div> <!-- /.theme-manage-area 
-	    -->
-	        <!-- Featured Tutors _______________________ -->
-	        <div class="event-section wow fadeInUp">
-	        	<div class="container">
-	        		<div class="theme-title">
-	        			<h2>Featured Tutors</h2>
-	        		</div>
-
-	        		<div class="row">
-	        			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
-	        				<div class="single-event theme-bg-color">
-	        					<div class="date p-color">
-	        						<img src="images/user/1.png" class="user-image" alt="">
-	        					</div>
-	        					<a href=""><h6>Tutor name</h6></a>
-	        					<p>3000/Month</p>
-	        					<p>01765153253</p>
-	        					<p>Dhaka</p>
-	        				</div> <!-- /.single-event -->
-	        			</div>
-	        			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
-	        				<div class="single-event theme-bg-color">
-	        					<div class="date p-color">
-	        						<img src="images/user/1.png" class="user-image" alt="">
-	        					</div>
-	        					<a href=""><h6>Tutor name</h6></a>
-	        					<p>3000/Month</p>
-	        					<p>01765153253</p>
-	        					<p>Dhaka</p>
-	        				</div> <!-- /.single-event -->
-	        			</div>
-
-	        			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
-	        				<div class="single-event theme-bg-color">
-	        					<div class="date p-color">
-	        						<img src="images/user/1.png" class="user-image" alt="">
-	        					</div>
-	        					<a href=""><h6>Tutor name</h6></a>
-	        					<p>3000/Month</p>
-	        					<p>01765153253</p>
-	        					<p>Dhaka</p>
-	        				</div> <!-- /.single-event -->
-	        			</div>
-
-	        			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
-	        				<div class="single-event theme-bg-color">
-	        					<div class="date p-color">
-	        						<img src="images/user/1.png" class="user-image" alt="">
-	        					</div>
-	        					<a href=""><h6>Tutor name</h6></a>
-	        					<p>3000/Month</p>
-	        					<p>01765153253</p>
-	        					<p>Dhaka</p>
-	        				</div> <!-- /.single-event -->
-	        			</div>
-
-	        			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
-	        				<div class="single-event theme-bg-color">
-	        					<div class="date p-color">
-	        						<img src="images/user/1.png" class="user-image" alt="">
-	        					</div>
-	        					<a href=""><h6>Tutor name</h6></a>
-	        					<p>3000/Month</p>
-	        					<p>01765153253</p>
-	        					<p>Dhaka</p>
-	        				</div> <!-- /.single-event -->
-	        			</div>
-
-	        			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
-	        				<div class="single-event theme-bg-color">
-	        					<div class="date p-color">
-	        						<img src="images/user/1.png" class="user-image" alt="">
-	        					</div>
-	        					<a href=""><h6>Tutor name</h6></a>
-	        					<p>3000/Month</p>
-	        					<p>01765153253</p>
-	        					<p>Dhaka</p>
-	        				</div> <!-- /.single-event -->
-	        			</div>
-	        		</div> <!-- /.row -->
-	        	</div> <!-- /.container -->
-	        </div> <!-- /.Featured Tutors -->
-
-
-	        
-         <!-- Information Banner _______________________ -->
-	        <div class="information-banner">
-	        	<div class="container">
-	        		<h3>Information for teachers and students, Event information and <span class="p-color">TutorPoint</span></h3>
-	        		<h6>ONE OF THE MOST COMPLETE Education THEME</h6>
-	        		<a href="#" class="p-color-bg tran3s wow fadeInUp">Contact us</a>
-	        	</div> <!-- /.container -->
-	        </div> <!-- /.information-banner -->
-
-
-
-	        <!-- Popular Course _________________________ -->
-	        <div class="popular-course wow fadeInUp theme-bg-color mFix">
-	        	<div class="container">
-	        		<h2>POPULAR COURSES</h2>
-
-	        		<div class="row">
-		        		<div class="theme-slider course-item-wrapper">
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/2.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">web development courses</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/3.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">Learn Basic German Fast</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/4.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">basic time use properly</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/3.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">Learn Basic German Fast</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/2.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">web development courses</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/4.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">basic time use properly</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/3.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">Learn Basic German Fast</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-
-		        			<div class="item hvr-float-shadow">
-		        				<div class="img-holder"><img src="images/home/2.jpg" alt="Image"></div>
-		        				<div class="text">
-		        					<h4><a href="course-details.html">web development courses</a></h4>
-		        					<div class="img round-border"><img src="images/home/1.png" alt="Image"></div>
-		        					<h6>Mahfuz riad</h6>
-		        					<ul>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star" aria-hidden="true"></i></li>
-		        						<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-		        					</ul>
-		        					<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat</p>
-		        					<div class="clear-fix">
-		        						<ul class="float-left">
-		        							<li><i class="fa fa-users" aria-hidden="true"></i> 345</li>
-		        							<li><i class="fa fa-comment" aria-hidden="true"></i> 5</li>
-		        							<li><i class="fa fa-map-marker" aria-hidden="true"></i> Tea road,CA</li>
-		        						</ul>
-
-		        						<a href="course-details.html" class="tran3s p-color-bg themehover">$50.00</a>
-		        					</div>
-		        				</div> <!-- /.text -->
-		        			</div> <!-- /.item -->
-		        		</div> <!-- /.course-slider -->
-		        	</div>
-	        	</div> <!-- /.container -->
-	        </div> <!-- /.popular-course -->
-
-
-
-	        <!-- Testimonial And FAQ Section _________________________ -->
-	        <div class="test-faq">
-	        	<div class="container">
-	        		<div class="row">
-	        			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 testimonial wow fadeInLeft float-right">
-	        				<div class="wrapper">
-	        					<h3>TESTIMONIALS</h3>
-	        					<div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
-								  	  <!-- Indicators -->
-									  <ol class="carousel-indicators">
-									    <li data-target="#testimonial-carousel" data-slide-to="0" class="active"></li>
-									    <li data-target="#testimonial-carousel" data-slide-to="1"></li>
-									    <li data-target="#testimonial-carousel" data-slide-to="2"></li>
-									  </ol>
-
-									  <!-- Wrapper for slides -->
-									  <div class="carousel-inner" role="listbox">
-									    <div class="item active">
-									      <div class="single-box theme-bg-color">
-									      		<div class="img round-border"><img src="images/home/2.png" alt="Image"></div>
-									      		<h6>ghost riad <span>(Sir.Principal)</span></h6>
-									      		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
-									      </div> <!-- /.single-box -->
-
-									      <div class="single-box theme-bg-color">
-									      		<div class="img round-border"><img src="images/home/3.png" alt="Image"></div>
-									      		<h6>Masum nodi <span>(Sir.Principal Fohinni)</span></h6>
-									      		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
-									      </div> <!-- /.single-box -->
-									    </div>
-
-									    <div class="item">
-									      <div class="single-box theme-bg-color">
-									      		<div class="img round-border"><img src="images/home/2.png" alt="Image"></div>
-									      		<h6>ghost riad <span>(Sir.Principal)</span></h6>
-									      		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
-									      </div> <!-- /.single-box -->
-
-									      <div class="single-box theme-bg-color">
-									      		<div class="img round-border"><img src="images/home/3.png" alt="Image"></div>
-									      		<h6>Masum nodi <span>(Sir.Principal Fohinni)</span></h6>
-									      		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
-									      </div> <!-- /.single-box -->
-									    </div>
-
-									    <div class="item">
-									      <div class="single-box theme-bg-color">
-									      		<div class="img round-border"><img src="images/home/2.png" alt="Image"></div>
-									      		<h6>ghost riad <span>(Sir.Principal)</span></h6>
-									      		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
-									      </div> <!-- /.single-box -->
-
-									      <div class="single-box theme-bg-color">
-									      		<div class="img round-border"><img src="images/home/3.png" alt="Image"></div>
-									      		<h6>Masum nodi <span>(Sir.Principal Fohinni)</span></h6>
-									      		<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
-									      </div> <!-- /.single-box -->
-									    </div>
-									</div>
-								</div> <!-- /#testimonial-carousel -->
-	        				</div> <!-- /.wrapper -->
-	        			</div> <!-- /.testimonial -->
-
-	        			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 faq wow fadeInRight float-left">
-	        				<div class="wrapper">
-	        					<h3>Frequently Asked Questions</h3>
-	        					<!-- ________________ Panel _______________ -->
-	        					<div class="faq_panel">
-									<div class="panel-group theme-accordion" id="accordion">
-									  <div class="panel">
-									    <div class="panel-heading active-panel">
-									      <h6 class="panel-title">
-									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-									        Smart Learning is an education platform partners</a>
-									      </h6>
-									    </div>
-									    <div id="collapse1" class="panel-collapse collapse in">
-									      <div class="panel-body">
-									      	<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempo- ra incidunt ut labore et dolore magnam aliquam quaerat voluptatem Nemo enim ipsam voluptatem</p>
-									      </div>
-									    </div>
-									  </div> <!-- /panel 1 -->
-									  <div class="panel">
-									    <div class="panel-heading">
-									      <h6 class="panel-title">
-									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-									         Education of Tomorrow, Rooted in Tradition</a>
-									      </h6>
-									    </div>
-									    <div id="collapse2" class="panel-collapse collapse">
-									      <div class="panel-body">
-									      	<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem Nemo enim ipsam voluptatem</p>
-									      </div>
-									    </div>
-									  </div> <!-- /panel 2 -->
-									  <div class="panel">
-									    <div class="panel-heading">
-									      <h6 class="panel-title">
-									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-									        Lorem ipsum dolor sit amet, consectetur adipiscing</a>
-									      </h6>
-									    </div>
-									    <div id="collapse3" class="panel-collapse collapse">
-									      <div class="panel-body">
-									      	<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem Nemo enim ipsam voluptatem</p>
-									      </div>
-									    </div>
-									  </div> <!-- /panel 3 -->
-
-									  <div class="panel">
-									    <div class="panel-heading">
-									      <h6 class="panel-title">
-									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-									        Build Education Website Using HTML</a>
-									      </h6>
-									    </div>
-									    <div id="collapse4" class="panel-collapse collapse">
-									      <div class="panel-body">
-									      	<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem Nemo enim ipsam voluptatem</p>
-									      </div>
-									    </div>
-									  </div> <!-- /panel 4 -->
-
-									  <div class="panel">
-									    <div class="panel-heading">
-									      <h6 class="panel-title">
-									        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-									        BEST INDUSTRY LEADERS for awesome courses</a>
-									      </h6>
-									    </div>
-									    <div id="collapse5" class="panel-collapse collapse">
-									      <div class="panel-body">
-									      	<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem Nemo enim ipsam voluptatem</p>
-									      </div>
-									    </div>
-									  </div> <!-- /panel 5 -->
-
-									</div> <!-- end #accordion -->
-								</div> <!-- End of .faq_panel -->
-	        				</div> <!-- /.wrapper -->
-	        			</div> <!-- /.faq -->
-	        		</div> <!-- /.row -->
-	        	</div> <!-- /.container -->
-	        </div> <!-- /.test-faq -->
-	        <!-- SubsCribe Banner ___________________ -->
-	        <div class="subscribe-banner p-color-bg wow">
-	        	<div class="container">
-	        		<h3>Subscribe now</h3>
-	        		<p>Receive weekly newsletter with educational materials, new courses, most popular posts, popular books and much more!</p>
-	        		<form action="#" class="clear-fix">
-	        			<input type="email" class="float-left wow fadeInLeft" placeholder="Email address">
-	        			<button class="float-left tran3s wow fadeInRight">Subcribe</button>
-	        		</form>
-	        	</div>
-	        </div>
-	        <!-- Footer ______________________________ -->
-	        <footer>
-	        	<div class="top-footer">
-	        		<div class="container">
-	        			<div class="row">
-	        				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-about">
-	        					<h4>About TutorPoint</h4>
-	        					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	        					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	        					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	        					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	        					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	        					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	        					<a href="about-us.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> About us</a>
-	        					<a href="our-teacher.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Member</a>
-	        					<ul>
-									<li><a href="#" class="tran3s round-border icon"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-			        				<li><a href="#" class="tran3s round-border icon"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="tran3s round-border icon"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-									<li><a href="#" class="tran3s round-border icon"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-								</ul>
-	        				</div> <!-- /.footer-about -->
-
-	        				<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 footer-contact">
-	        					<h4>CONTACT US</h4>
-	        					<ul>
-	        						<li>
-	        							<i class="fa fa-envelope-o" aria-hidden="true"></i>
-	        							<a href="mailto:helpneed@edutech.com" class="tran3s">helpneed@edutech.com</a>
-	        						</li>
-	        						<li>
-	        							<i class="fa fa-phone" aria-hidden="true"></i>
-	        							<a href="tel:+8801712570051" class="tran3s">+8801712570051</a>
-	        						</li>
-	        						<li><i class="fa fa-map-marker" aria-hidden="true"></i>Edine rode,1234 Plot/RS ,CA</li>
-	        					</ul>
-	        				</div> <!-- /.footer-contact -->
-
-	        				<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 footer-quick-link">
-	        					<h4>Quick link</h4>
-	        					<ul>
-	        						<li><a href="course-v2.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Courses</a></li>
-	        						<li><a href="blog-v1.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> News/Blog</a></li>
-	        						<li><a href="event.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Event</a></li>
-	        						<li><a href="our-teacher.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Member</a></li>
-	        						<li><a href="faq.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Privacy Policy</a></li>
-	        						<li><a href="faq.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Help</a></li>
-	        						<li><a href="contact-us.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Support</a></li>
-	        						<li><a href="#" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Education</a></li>
-	        						<li><a href="our-teacher.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Teacher</a></li>
-	        					</ul>
-	        				</div> <!-- /.footer-quick-link -->
-
-	        				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-event">
-	        					<h4>Latest events</h4>
-
-	        					<div id="footer-event-carousel" class="carousel slide" data-ride="carousel">
-								  	  <!-- Indicators -->
-									  <ol class="carousel-indicators">
-									    <li data-target="#footer-event-carousel" data-slide-to="0" class="active"></li>
-									    <li data-target="#footer-event-carousel" data-slide-to="1"></li>
-									    <li data-target="#footer-event-carousel" data-slide-to="2"></li>
-									  </ol>
-
-									  <!-- Wrapper for slides -->
-									  <div class="carousel-inner" role="listbox">
-									    <div class="item active">
-									      <ul>
-									      	<li>
-									      		<div class="date p-color-bg">27 <span>Dec</span></div>
-									      		<a href="event-details.html"><h6>Learning Management</h6></a>
-									      		<ul>
-					        						<li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
-					        						<li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
-					        					</ul>
-									      	</li>
-
-									      	<li>
-									      		<div class="date p-color-bg">19 <span>Dec</span></div>
-									      		<a href="event-details.html"><h6>LEARN COUSES ONLINE</h6></a>
-									      		<ul>
-					        						<li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
-					        						<li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
-					        					</ul>
-									      	</li>
-
-									      	<li>
-									      		<div class="date p-color-bg">07 <span>Dec</span></div>
-									      		<a href="event-details.html"><h6>COURSES FOR FREE GED</h6></a>
-									      		<ul>
-					        						<li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
-					        						<li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
-					        					</ul>
-									      	</li>
-									      </ul>
-									    </div> <!-- /.item -->
-
-									    <div class="item">
-									      <ul>
-									      	<li>
-									      		<div class="date p-color-bg">27 <span>Dec</span></div>
-									      		<a href="event-details.html"><h6>Learning Management</h6></a>
-									      		<ul>
-					        						<li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
-					        						<li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
-					        					</ul>
-									      	</li>
-
-									      	<li>
-									      		<div class="date p-color-bg">19 <span>Dec</span></div>
-									      		<a href="event-details.html"><h6>LEARN COUSES ONLINE</h6></a>
-									      		<ul>
-					        						<li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
-					        						<li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
-					        					</ul>
-									      	</li>
-
-									      	<li>
-									      		<div class="date p-color-bg">07 <span>Dec</span></div>
-									      		<a href="event-details.html"><h6>COURSES FOR FREE GED</h6></a>
-									      		<ul>
-					        						<li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
-					        						<li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
-					        					</ul>
-									      	</li>
-									      </ul>
-									    </div> <!-- /.item -->
-
-									    <div class="item">
-									      <ul>
-									      	<li>
-									      		<div class="date p-color-bg">27 <span>Dec</span></div>
-									      		<a href="event-details.html"><h6>Learning Management</h6></a>
-									      		<ul>
-					        						<li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
-					        						<li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
-					        					</ul>
-									      	</li>
-
-									      	<li>
-									      		<div class="date p-color-bg">19 <span>Dec</span></div>
-									      		<a href="event-details.html"><h6>LEARN COUSES ONLINE</h6></a>
-									      		<ul>
-					        						<li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
-					        						<li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
-					        					</ul>
-									      	</li>
-
-									      	<li>
-									      		<div class="date p-color-bg">07 <span>Dec</span></div>
-									      		<a href="event-details.html"><h6>COURSES FOR FREE GED</h6></a>
-									      		<ul>
-					        						<li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
-					        						<li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
-					        					</ul>
-									      	</li>
-									      </ul>
-									    </div> <!-- /.item -->  
-									</div>
-								</div> <!-- /#footer-event-carousel -->
-	        				</div> <!-- /.footer-event -->
-	        			</div> <!-- /.row -->
-	        		</div> <!-- /.container -->
-	        	</div> <!-- /.top-footer -->
-
-	        	<div class="bottom-footer">
-	        		<p>Copyright 2016 &copy; <a href="" class="tran3s" target="_blank">TutorPoint</a> <span>|</span> Designed by <span class="p-color">SoftScandic</span></p>
-	        	</div> <!-- /.bottom-footer -->
-	        </footer>
-
-	        <!-- Scroll Top Button -->
-			<button class="scroll-top tran3s p-color-bg">
-				<i class="fa fa-angle-up" aria-hidden="true"></i>
-			</button>
-			<!-- pre loader  -->
-		 	<div id="loader-wrapper">
-				<div id="loader"></div>
-			</div>
-
-
-
-
-
-		<!-- Js File_________________________________ -->
-
-		<!-- j Query -->
-		<script type="text/javascript" src="vendor/jquery-2.1.4.js"></script>
-
-		<!-- Bootstrap JS -->
-		<script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
-
-		<!-- Vendor js _________ -->
-		<!-- revolution -->
-		<script src="vendor/revolution/jquery.themepunch.tools.min.js"></script>
-		<script src="vendor/revolution/jquery.themepunch.revolution.min.js"></script>
-		<script type="text/javascript" src="vendor/revolution/revolution.extension.slideanims.min.js"></script>
-		<script type="text/javascript" src="vendor/revolution/revolution.extension.layeranimation.min.js"></script>
-		<script type="text/javascript" src="vendor/revolution/revolution.extension.navigation.min.js"></script>
-		<script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
-		<script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
-
-		<!-- Google map js -->
-		<script src="http://maps.google.com/maps/api/js"></script> <!-- Gmap Helper -->
-		<script src="vendor/gmap.js"></script>
-		<!-- Bootstrap Select JS -->
-		<script type="text/javascript" src="vendor/bootstrap-select/dist/js/bootstrap-select.js"></script>
-		<!-- Time picker -->
-		<script type="text/javascript" src="vendor/time-picker/jquery.timepicker.min.js"></script>
-		<!-- WOW js -->
-		<script type="text/javascript" src="vendor/WOW-master/dist/wow.min.js"></script>
-		<!-- owl.carousel -->
-		<script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
-		<!-- js count to -->
-		<script type="text/javascript" src="vendor/jquery.appear.js"></script>
-		<script type="text/javascript" src="vendor/jquery.countTo.js"></script>
-
-		<!-- Theme js -->
-		<script type="text/javascript" src="js/theme.js"></script>
-
-		</div> <!-- /.main-page-wrapper -->
-	</body>
-
+                                    <!-- /panel 3 -->
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h6 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                                    Build Education Website Using HTML</a>
+                                            </h6>
+                                        </div>
+                                        <div id="collapse4" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem Nemo enim ipsam voluptatem</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /panel 4 -->
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h6 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                                                    BEST INDUSTRY LEADERS for awesome courses</a>
+                                            </h6>
+                                        </div>
+                                        <div id="collapse5" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem Nemo enim ipsam voluptatem</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /panel 5 -->
+                                </div>
+                                <!-- end #accordion -->
+                            </div>
+                            <!-- End of .faq_panel -->
+                        </div>
+                        <!-- /.wrapper -->
+                    </div>
+                    <!-- /.faq -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.test-faq -->
+        <!-- SubsCribe Banner ___________________ -->
+        <div class="subscribe-banner p-color-bg wow">
+            <div class="container">
+                <h3>Subscribe now</h3>
+                <p>Receive weekly newsletter with educational materials, new courses, most popular posts, popular books and much more!</p>
+                <form action="#" class="clear-fix">
+                    <input type="email" class="float-left wow fadeInLeft" placeholder="Email address">
+                    <button class="float-left tran3s wow fadeInRight">Subcribe</button>
+                </form>
+            </div>
+        </div>
+        <!-- Footer ______________________________ -->
+        <footer>
+            <div class="top-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-about">
+                            <h4>About TutorPoint</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <a href="about-us.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> About us</a>
+                            <a href="our-teacher.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Member</a>
+                            <ul>
+                                <li><a href="#" class="tran3s round-border icon"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="tran3s round-border icon"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="tran3s round-border icon"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="tran3s round-border icon"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- /.footer-about -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 footer-contact">
+                            <h4>CONTACT US</h4>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <a href="mailto:helpneed@edutech.com" class="tran3s">helpneed@edutech.com</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <a href="tel:+8801712570051" class="tran3s">+8801712570051</a>
+                                </li>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>Edine rode,1234 Plot/RS ,CA</li>
+                            </ul>
+                        </div>
+                        <!-- /.footer-contact -->
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 footer-quick-link">
+                            <h4>Quick link</h4>
+                            <ul>
+                                <li><a href="course-v2.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Courses</a></li>
+                                <li><a href="blog-v1.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> News/Blog</a></li>
+                                <li><a href="event.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Event</a></li>
+                                <li><a href="our-teacher.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Team Member</a></li>
+                                <li><a href="faq.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Privacy Policy</a></li>
+                                <li><a href="faq.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Help</a></li>
+                                <li><a href="contact-us.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Support</a></li>
+                                <li><a href="#" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Education</a></li>
+                                <li><a href="our-teacher.html" class="tran3s"><i class="fa fa-caret-right" aria-hidden="true"></i> Teacher</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.footer-quick-link -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 footer-event">
+                            <h4>Latest events</h4>
+                            <div id="footer-event-carousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#footer-event-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#footer-event-carousel" data-slide-to="1"></li>
+                                    <li data-target="#footer-event-carousel" data-slide-to="2"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <ul>
+                                            <li>
+                                                <div class="date p-color-bg">27 <span>Dec</span></div>
+                                                <a href="event-details.html">
+                                                    <h6>Learning Management</h6>
+                                                </a>
+                                                <ul>
+                                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
+                                                    <li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="date p-color-bg">19 <span>Dec</span></div>
+                                                <a href="event-details.html">
+                                                    <h6>LEARN COUSES ONLINE</h6>
+                                                </a>
+                                                <ul>
+                                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
+                                                    <li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="date p-color-bg">07 <span>Dec</span></div>
+                                                <a href="event-details.html">
+                                                    <h6>COURSES FOR FREE GED</h6>
+                                                </a>
+                                                <ul>
+                                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
+                                                    <li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.item -->
+                                    <div class="item">
+                                        <ul>
+                                            <li>
+                                                <div class="date p-color-bg">27 <span>Dec</span></div>
+                                                <a href="event-details.html">
+                                                    <h6>Learning Management</h6>
+                                                </a>
+                                                <ul>
+                                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
+                                                    <li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="date p-color-bg">19 <span>Dec</span></div>
+                                                <a href="event-details.html">
+                                                    <h6>LEARN COUSES ONLINE</h6>
+                                                </a>
+                                                <ul>
+                                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
+                                                    <li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="date p-color-bg">07 <span>Dec</span></div>
+                                                <a href="event-details.html">
+                                                    <h6>COURSES FOR FREE GED</h6>
+                                                </a>
+                                                <ul>
+                                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
+                                                    <li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.item -->
+                                    <div class="item">
+                                        <ul>
+                                            <li>
+                                                <div class="date p-color-bg">27 <span>Dec</span></div>
+                                                <a href="event-details.html">
+                                                    <h6>Learning Management</h6>
+                                                </a>
+                                                <ul>
+                                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
+                                                    <li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="date p-color-bg">19 <span>Dec</span></div>
+                                                <a href="event-details.html">
+                                                    <h6>LEARN COUSES ONLINE</h6>
+                                                </a>
+                                                <ul>
+                                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
+                                                    <li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="date p-color-bg">07 <span>Dec</span></div>
+                                                <a href="event-details.html">
+                                                    <h6>COURSES FOR FREE GED</h6>
+                                                </a>
+                                                <ul>
+                                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> 10am - 05pm</li>
+                                                    <li><i class="fa fa-tags" aria-hidden="true"></i> Gpur Academy</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.item -->
+                                </div>
+                            </div>
+                            <!-- /#footer-event-carousel -->
+                        </div>
+                        <!-- /.footer-event -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.top-footer -->
+            <div class="bottom-footer">
+                <p>Copyright 2016 &copy; <a href="" class="tran3s" target="_blank">TutorPoint</a> <span>|</span> Designed by <span class="p-color">SoftScandic</span></p>
+            </div>
+            <!-- /.bottom-footer -->
+        </footer>
+        <!-- Scroll Top Button -->
+        <button class="scroll-top tran3s p-color-bg">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+        </button>
+        <!-- pre loader  -->
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+        </div>
+        <!-- Js File_________________________________ -->
+        <!-- j Query -->
+        <script type="text/javascript" src="vendor/jquery-2.1.4.js"></script>
+        <!-- Bootstrap JS -->
+        <script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
+        <!-- Vendor js _________ -->
+        <!-- revolution -->
+        <script src="vendor/revolution/jquery.themepunch.tools.min.js"></script>
+        <script src="vendor/revolution/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="vendor/revolution/revolution.extension.slideanims.min.js"></script>
+        <script type="text/javascript" src="vendor/revolution/revolution.extension.layeranimation.min.js"></script>
+        <script type="text/javascript" src="vendor/revolution/revolution.extension.navigation.min.js"></script>
+        <script type="text/javascript" src="vendor/revolution/revolution.extension.kenburn.min.js"></script>
+        <script type="text/javascript" src="vendor/revolution/revolution.extension.actions.min.js"></script>
+        <!-- Google map js -->
+        <script src="http://maps.google.com/maps/api/js"></script>
+        <!-- Gmap Helper -->
+        <script src="vendor/gmap.js"></script>
+        <!-- Bootstrap Select JS -->
+        <script type="text/javascript" src="vendor/bootstrap-select/dist/js/bootstrap-select.js"></script>
+        <!-- Time picker -->
+        <script type="text/javascript" src="vendor/time-picker/jquery.timepicker.min.js"></script>
+        <!-- WOW js -->
+        <script type="text/javascript" src="vendor/WOW-master/dist/wow.min.js"></script>
+        <!-- owl.carousel -->
+        <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.min.js"></script>
+        <!-- js count to -->
+        <script type="text/javascript" src="vendor/jquery.appear.js"></script>
+        <script type="text/javascript" src="vendor/jquery.countTo.js"></script>
+        <!-- Theme js -->
+        <script type="text/javascript" src="js/theme.js"></script>
+    </div>
+    <!-- /.main-page-wrapper -->
+</body>
 <!-- Mirrored from themazine.com/html/edu/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Mar 2019 18:39:38 GMT -->
+
 </html>
