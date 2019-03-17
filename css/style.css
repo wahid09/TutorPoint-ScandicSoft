@@ -3683,3 +3683,13 @@ footer .bottom-footer a:hover {
     border-bottom: 3px solid #CD2122;
     margin-top: 5px;
 }
+
+.popular-course {
+    padding: 0px;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.theme-bg-color {
+    background: #FFFFFF;
+}
