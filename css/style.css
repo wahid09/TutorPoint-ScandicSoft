@@ -761,12 +761,13 @@ header.inner-header .top-header {
 /*==================== Manage Section =================*/
 
 .theme-manage-area .item1 {
-    width: calc(32% + 25px);
+    width: calc(50% + 25px);
     padding: 40px 15px 44px 35px;
+    background: #FFFFFF;
 }
 
 .theme-manage-area .item2 {
-    width: calc(32% - 4px);
+    width: calc(48% - 4px);
     position: relative;
 }
 
@@ -3636,6 +3637,7 @@ footer .bottom-footer a:hover {
     color: #fff;
     border-radius: 0;
     background-color: #CD2122;
+    margin-right: 85px;
 }
 
 .btn-primary {
