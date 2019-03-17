@@ -3678,3 +3678,8 @@ footer .bottom-footer a:hover {
     box-shadow: 0 0 1px #DBDBDB;
     padding: 10px;
 }
+
+.recent-tutor {
+    border-bottom: 3px solid #CD2122;
+    margin-top: 5px;
+}
