@@ -3666,7 +3666,7 @@ footer .bottom-footer a:hover {
 
 .fe-tutor {
     margin-top: 10px;
-    border-bottom: 5px solid #CD2122;
+    border-bottom: 3px solid #CD2122;
 }
 
 .fe-profile {
@@ -3692,4 +3692,15 @@ footer .bottom-footer a:hover {
 
 .theme-bg-color {
     background: #FFFFFF;
+}
+
+.popular-course h2 {
+    text-align: left;
+    font-size: 20px;
+    text-transform: none;
+    border-bottom: 3px solid #CD2122;
+}
+
+.owl-carousel .owl-item {
+    margin-top: -35px;
 }
