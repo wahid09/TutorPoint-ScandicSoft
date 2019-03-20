@@ -3719,8 +3719,9 @@ footer .bottom-footer a:hover {
     margin-top: 35px;
     padding: 10px;
     border-bottom: 2px solid red;
+    max-width: 1190px;
 }
-.faq{
+.faq-request{
     background-color: #fff;
     color: #888;
     padding: 10px;
@@ -3728,7 +3729,6 @@ footer .bottom-footer a:hover {
     border-radius: 0px;
     box-shadow: 0 0 8px #DBDBDB;
     margin-top:12px;
-    
 }
 .faq-header{
 border-bottom: 2px solid #CD2122;
@@ -3751,9 +3751,13 @@ margin-top: 10px;
 .subscribe-banner {
     margin-top: -180px;
 }
-header.main-header .top-header ul li a .re-head-top a, header.main-header .tran3s .bootstrap-select.btn-group .dropdown-menu li {
-    color: #6f6f6f;
+.subscribe-banner {
+    margin-top: 0px;
 }
+
+
+
+
 /* ================ Model ====================*/
 .modal {
   text-align: center;
