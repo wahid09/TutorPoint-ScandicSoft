@@ -3729,6 +3729,7 @@ footer .bottom-footer a:hover {
     border-radius: 0px;
     box-shadow: 0 0 8px #DBDBDB;
     margin-top:12px;
+    max-width: 390px;
 }
 .faq-header{
 border-bottom: 2px solid #CD2122;
