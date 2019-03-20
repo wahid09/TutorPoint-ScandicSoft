@@ -3712,6 +3712,7 @@ footer .bottom-footer a:hover {
     margin-top: -35px;
     padding-top: 10px;
 }
+/* ======================= Tutor Request ===================== */
 .request-tutor{
 }
 .request-for-tutor {
@@ -3749,4 +3750,26 @@ margin-top: 10px;
 }
 .subscribe-banner {
     margin-top: -180px;
+}
+header.main-header .top-header ul li a .re-head-top a, header.main-header .tran3s .bootstrap-select.btn-group .dropdown-menu li {
+    color: #6f6f6f;
+}
+/* ================ Model ====================*/
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
