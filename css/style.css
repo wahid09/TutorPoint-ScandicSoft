@@ -3788,6 +3788,7 @@ margin-top: 10px;
     box-shadow: 0 0 8px #DBDBDB;
     margin-top: 12px;
     margin-right: 10px;
+    box-sizing: border-box;
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
     padding: 0px;
@@ -3818,6 +3819,9 @@ small, .large {
 padding-left: 0px;
 text-decoration: none;
 text-align: left;
+}
+.img-pre{
+    margin-top: 18px;
 }
 .subscribe-banner {
     margin-top: 5px;
