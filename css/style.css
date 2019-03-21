@@ -3826,3 +3826,20 @@ text-align: left;
 .subscribe-banner {
     margin-top: 5px;
 }
+/* ============= available-tution  ==== */ 
+.available-tution{
+    background: #FFF;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #DBDBDB;
+    box-shadow: 0 0 8px #DBDBDB;
+    margin-top: 12px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+.av-heading{
+    background: #56A351;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 0px;
+}
