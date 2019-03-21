@@ -3778,3 +3778,47 @@ margin-top: 10px;
   text-align: left;
   vertical-align: middle;
 }
+
+/* ===================== PREMIUM TUTOR ===================*/
+.premium-tutor {
+    background: #FFF;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #DBDBDB;
+    box-shadow: 0 0 8px #DBDBDB;
+    margin-top: 12px;
+    margin-right: 10px;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 0px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 0px;
+}
+small, .small {
+    font-size: 14px;
+    background: #56A351;
+    padding: 3px;
+    width: 110px;
+    height: 35px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+small, .large {
+    font-size: 14px;
+    background: #4652FA;
+    padding: 3px;
+    width: 110px;
+    height: 35px;
+    margin-bottom: 5px;
+    color: white;
+}
+.area p{
+padding-left: 0px;
+text-decoration: none;
+text-align: left;
+}
+.subscribe-banner {
+    margin-top: 5px;
+}
