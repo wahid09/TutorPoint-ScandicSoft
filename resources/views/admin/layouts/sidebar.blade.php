@@ -43,20 +43,19 @@
                             <li>
                                 <a href="pages/forms/basic-form-elements.html">Basic Form Elements</a>
                             </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">assignment</i>
+                            <span>User</span>
+                        </a>
+                        <ul class="ml-menu">
                             <li>
-                                <a href="pages/forms/advanced-form-elements.html">Advanced Form Elements</a>
+                                <a href="pages/forms/basic-form-elements.html">Add User</a>
                             </li>
                             <li>
-                                <a href="pages/forms/form-examples.html">Form Examples</a>
-                            </li>
-                            <li>
-                                <a href="pages/forms/form-validation.html">Form Validation</a>
-                            </li>
-                            <li>
-                                <a href="pages/forms/form-wizard.html">Form Wizard</a>
-                            </li>
-                            <li>
-                                <a href="pages/forms/editors.html">Editors</a>
+                                <a href="pages/forms/basic-form-elements.html">Manage User</a>
                             </li>
                         </ul>
                     </li>
