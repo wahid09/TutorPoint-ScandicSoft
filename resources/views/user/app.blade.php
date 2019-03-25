@@ -6,10 +6,11 @@
 <body>
 	<div class="main-page-wrapper">
 		@include('user/layouts/header')
-		@include('user/layouts/slider')
-		@include('user/layouts/featuredtutor')
-		@include('user/layouts/contact')
-		@include('user/layouts/faq')
+
+		@section('main-content')
+
+          @show
+
 		@include('user/layouts/subscriber')
 		@include('user/layouts/footer')
 	</div>

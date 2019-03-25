@@ -8,7 +8,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
                         <div class="single-event theme-bg-color">
                             <div class="date p-color">
-                                <img src="images/user/1.png" class="user-image" alt="">
+                                <img src="{{asset('user/images/user/1.png')}}" class="user-image" alt="">
                             </div>
                             <a href="">
                                 <h6>Tutor name</h6>
@@ -22,7 +22,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
                         <div class="single-event theme-bg-color">
                             <div class="date p-color">
-                                <img src="images/user/1.png" class="user-image" alt="">
+                                <img src="{{asset('user/images/user/1.png')}}" class="user-image" alt="">
                             </div>
                             <a href="">
                                 <h6>Tutor name</h6>
@@ -36,7 +36,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
                         <div class="single-event theme-bg-color">
                             <div class="date p-color">
-                                <img src="images/user/1.png" class="user-image" alt="">
+                                <img src="{{asset('user/images/user/1.png')}}" class="user-image" alt="">
                             </div>
                             <a href="">
                                 <h6>Tutor name</h6>
@@ -50,7 +50,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
                         <div class="single-event theme-bg-color">
                             <div class="date p-color">
-                                <img src="images/user/1.png" class="user-image" alt="">
+                                <img src="{{asset('user/images/user/1.png')}}" class="user-image" alt="">
                             </div>
                             <a href="">
                                 <h6>Tutor name</h6>
@@ -64,7 +64,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
                         <div class="single-event theme-bg-color">
                             <div class="date p-color">
-                                <img src="images/user/1.png" class="user-image" alt="">
+                                <img src="{{asset('user/images/user/1.png')}}" class="user-image" alt="">
                             </div>
                             <a href="">
                                 <h6>Tutor name</h6>
@@ -78,7 +78,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp hvr-float-shadow">
                         <div class="single-event theme-bg-color">
                             <div class="date p-color">
-                                <img src="images/user/1.png" class="user-image" alt="">
+                                <img src="{{asset('user/images/user/1.png')}}" class="user-image" alt="">
                             </div>
                             <a href="">
                                 <h6>Tutor name</h6>

@@ -26,7 +26,7 @@
             <div class="container">
                 <div class="main-menu-wrapper clear-fix">
                     <div class="container">
-                        <div class="logo float-left"><a href="index.html" style="vertical-align:middle;"><img src="images/logo/logo.png" alt="LOGO"></a></div>
+                        <div class="logo float-left"><a href="{{URL::to('/')}}" style="vertical-align:middle;"><img src="{{asset('user/images/logo/logo.png')}}" alt="LOGO"></a></div>
                         <!-- Menu -->
                         <nav class="navbar float-right">
                             <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,11 +41,11 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="navbar-collapse-1">
                                 <ul class="nav navbar-nav">
-                                    <li class="dropdown-holder current-page-item"><a href="index2.html">Home</a>
+                                    <li class="dropdown-holder current-page-item"><a href="{{url::to('/')}}">Home</a>
                                     </li>
                                     <li class="dropdown-holder"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Search Tutors</a>
                                     </li>
-                                    <li class="dropdown-holder"><a href="requesttutor.html">Request a Tutor</a>
+                                    <li class="dropdown-holder"><a href="{{URL::to('/requesttutor')}}">Request a Tutor</a>
                                     </li>
                                     <li class="dropdown-holder"><a href="premiumtutor.html">Premium Tutors</a>
                                     </li>

@@ -16,13 +16,13 @@
                                 <div class="carousel-inner" role="listbox">
                                     <div class="item active">
                                         <div class="single-box theme-bg-color">
-                                            <div class="img round-border"><img src="images/home/2.png" alt="Image"></div>
+                                            <div class="img round-border"><img src="{{asset('user/images/home/2.png')}}" alt="Image"></div>
                                             <h6>ghost riad <span>(Sir.Principal)</span></h6>
                                             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
                                         </div>
                                         <!-- /.single-box -->
                                         <div class="single-box theme-bg-color">
-                                            <div class="img round-border"><img src="images/home/3.png" alt="Image"></div>
+                                            <div class="img round-border"><img src="{{asset('user/images/home/3.png')}}" alt="Image"></div>
                                             <h6>Masum nodi <span>(Sir.Principal Fohinni)</span></h6>
                                             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
                                         </div>
@@ -30,13 +30,13 @@
                                     </div>
                                     <div class="item">
                                         <div class="single-box theme-bg-color">
-                                            <div class="img round-border"><img src="images/home/2.png" alt="Image"></div>
+                                            <div class="img round-border"><img src="{{asset('user/images/home/2.png')}}" alt="Image"></div>
                                             <h6>ghost riad <span>(Sir.Principal)</span></h6>
                                             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
                                         </div>
                                         <!-- /.single-box -->
                                         <div class="single-box theme-bg-color">
-                                            <div class="img round-border"><img src="images/home/3.png" alt="Image"></div>
+                                            <div class="img round-border"><img src="{{asset('user/images/home/3.png')}}" alt="Image"></div>
                                             <h6>Masum nodi <span>(Sir.Principal Fohinni)</span></h6>
                                             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
                                         </div>
@@ -44,13 +44,13 @@
                                     </div>
                                     <div class="item">
                                         <div class="single-box theme-bg-color">
-                                            <div class="img round-border"><img src="images/home/2.png" alt="Image"></div>
+                                            <div class="img round-border"><img src="{{asset('user/images/home/2.png')}}" alt="Image"></div>
                                             <h6>ghost riad <span>(Sir.Principal)</span></h6>
                                             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
                                         </div>
                                         <!-- /.single-box -->
                                         <div class="single-box theme-bg-color">
-                                            <div class="img round-border"><img src="images/home/3.png" alt="Image"></div>
+                                            <div class="img round-border"><img src="{{asset('user/images/home/3.png')}}" alt="Image"></div>
                                             <h6>Masum nodi <span>(Sir.Principal Fohinni)</span></h6>
                                             <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolo- rem ipsum</p>
                                         </div>
