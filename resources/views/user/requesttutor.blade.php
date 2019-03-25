@@ -1,4 +1,14 @@
 @extends('user/app')
+@section('head')
+<style type="text/css" media="screen">
+    
+    header.inner-header .top-header div.left-side > ul > li > a,
+    header.inner-header .top-header .bootstrap-select.btn-group .dropdown-toggle .filter-option,
+    header.inner-header .bootstrap-select.btn-group .dropdown-toggle .caret:before {
+    color: black;
+}
+</style>
+@endsection
 @section('main-content')
  <div class="main-content">
             <div class="container">

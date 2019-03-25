@@ -10,3 +10,5 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('user/css/style.css') }}">
     <!-- responsive style sheet -->
     <link rel="stylesheet" type="text/css" href="{{ asset('user/css/responsive.css') }}">
+    @section('head')
+     @show

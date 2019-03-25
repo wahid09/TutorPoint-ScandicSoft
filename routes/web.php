@@ -10,3 +10,10 @@ Route::group(['namespace'=>'User'], function(){
 Route::get('admin/home', function () {
     return view('admin.home');
 });
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
