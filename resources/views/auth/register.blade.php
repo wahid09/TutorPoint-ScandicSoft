@@ -1,14 +1,30 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+@extends('user/app')
+@section('head')
+@endsection
+@section('main-content')
+ <div class="main-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 request-tutor">
+                        <div class="row">
+                            <div class="request-for-tutor">
+                                <h3>REGISTER AS A TUTOR FOR FREE!</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="request-head">
+                                        <h3>If you want a house tutor, Please fill up the form.</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        -->
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="search-group">
+                                        <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -69,9 +85,44 @@
                             </div>
                         </div>
                     </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 faq-request">
+                                    <div class="faq-header">
+                                        <h4>Help & Info:</h4>
+                                    </div>
+                                    <div class="faq-body">
+                                        <h5>Q. Is registration free of cost ?</h5>
+                                        <p>Ans: Yes registration as a tutor is free of cost. Permium tutors are placed on the front pages. More features are coming soon.</p>
+                                        <h5>Q. Why email need to be verified ?</h5>
+                                        <p>Ans: Email needs to be verified to make confirmed that you own that email address and avoid spam.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+
 @endsection
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

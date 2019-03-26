@@ -51,7 +51,7 @@
                                     </li>
                                     <li class="dropdown-holder"><a href="availabletution.html">Tutions</a>
                                     </li>
-                                    <li class="dropdown-holder"><a href="{{route('login')}}">Join us</a>
+                                    <li class="dropdown-holder"><a href="{{URL::to('loginregister')}}">Join us</a>
                                     </li>
                                     <li><a href="#">contact</a></li>
                                 </ul>
