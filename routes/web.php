@@ -18,3 +18,5 @@ Route::get('admin/home', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('verify/{token}', 'verifyController@verify')->name('verify');
