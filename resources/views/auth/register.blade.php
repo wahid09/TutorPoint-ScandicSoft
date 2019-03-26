@@ -23,7 +23,7 @@
                         -->
                             <div class="row">
                                 <div class="col-md-8">
-                                    <div class="search-group">
+                                    <div class="tutorlogin">
                                         <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 

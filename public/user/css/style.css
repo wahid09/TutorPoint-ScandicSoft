@@ -3854,3 +3854,13 @@ text-align: left;
     box-sizing: border-box;
 
 }
+.tutorlogin{
+    background: #FFF;
+    color: #000000;
+    padding: 10px;
+    border: 1px solid #DBDBDB;
+    box-shadow: 0 0 2px #DBDBDB;
+    margin-top: 12px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
