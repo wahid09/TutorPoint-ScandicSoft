@@ -12,6 +12,8 @@
 
     <!-- Waves Effect Plugin Js -->
     <script src="{{asset('admin/plugins/node-waves/waves.js')}}"></script>
+    @section('footer')
+     @show
 
     <!-- Jquery CountTo Plugin Js -->
     <script src="{{asset('admin/plugins/jquery-countto/jquery.countTo.js')}}"></script>

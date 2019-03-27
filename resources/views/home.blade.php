@@ -22,7 +22,7 @@
                         </div>
                     @endif
 
-                    <p class="lead">Your Account is : {{auth()->user()->verified() ? 'Verified' : 'Not verified . Please go to your email and verify your account. Thank you for registration.'}} </p>
+                    <p class="lead">Your Account is : {{auth()->user()->verified() ? 'Verified. Welcome to our community.' : 'Not verified . Please go to your email and verify your account. Thank you for registration.'}} </p>
                 </div>
             </div>
         </div>

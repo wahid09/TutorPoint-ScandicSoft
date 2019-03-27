@@ -20,7 +20,8 @@
 
     <!-- Morris Chart Css-->
     <link href="{{asset('admin/plugins/morrisjs/morris.css')}}" rel="stylesheet" />
-
+    @section('head')
+      @show
     <!-- Custom Css -->
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
 

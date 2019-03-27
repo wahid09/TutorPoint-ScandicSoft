@@ -34,17 +34,42 @@
                             <span>Home</span>
                         </a>
                     </li>
+                    <!-- New     -->
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">assignment</i>
-                            <span>Forms</span>
+                            <i class="material-icons">widgets</i>
+                            <span>Geographical Information(User)</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/forms/basic-form-elements.html">Basic Form Elements</a>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>District</span>
+                                </a>
+                                <ul class="ml-menu">
+                                    <li>
+                                        <a href="pages/widgets/cards/basic.html">Add District</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('district.index')}}">Manage District</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>Areas</span>
+                                </a>
+                                <ul class="ml-menu">
+                                    <li>
+                                        <a href="pages/widgets/infobox/infobox-1.html">Add Areas</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{route('area.index')}}">Manage Area</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
+                    <!-- //new -->
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">assignment</i>
