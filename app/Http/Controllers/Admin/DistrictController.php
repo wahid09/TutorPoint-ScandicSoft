@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\user\district;
+use Illuminate\Http\Request;
 
 class DistrictController extends Controller
 {
@@ -14,7 +15,8 @@ class DistrictController extends Controller
      */
     public function index()
     {
-        return view('admin.district.show');
+        $districts = district::all();
+        return view('admin.district.show', compact('districts'));
     }
 
     /**
@@ -24,7 +26,7 @@ class DistrictController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.district.district');
     }
 
     /**
@@ -35,7 +37,15 @@ class DistrictController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+
+        $district = new district;
+        $district->name = $request->name;
+        $district->save();
+
+        return redirect(route('district.index'))->with('success', 'Successfully added district');
     }
 
     /**

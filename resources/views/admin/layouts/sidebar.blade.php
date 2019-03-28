@@ -47,7 +47,7 @@
                                 </a>
                                 <ul class="ml-menu">
                                     <li>
-                                        <a href="pages/widgets/cards/basic.html">Add District</a>
+                                        <a href="{{route('district.create')}}">Add District</a>
                                     </li>
                                     <li>
                                         <a href="{{route('district.index')}}">Manage District</a>
@@ -60,7 +60,7 @@
                                 </a>
                                 <ul class="ml-menu">
                                     <li>
-                                        <a href="pages/widgets/infobox/infobox-1.html">Add Areas</a>
+                                        <a href="{{route('area.create')}}">Add Areas</a>
                                     </li>
                                     <li>
                                         <a href="{{route('area.index')}}">Manage Area</a>

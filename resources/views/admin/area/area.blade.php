@@ -3,15 +3,16 @@
 	<section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>Add District</h2>
+                <h2>Add Area</h2>
             </div>
             <!-- Horizontal Layout -->
+            @include('includes/error')
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Add District
+                                Add Area
                             </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
@@ -27,7 +28,8 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <form class="form-horizontal">
+                            <form class="form-horizontal" action="{{route('area.store')}}" method="POST">
+                                {{csrf_field()}}
                                 <div class="row clearfix">
                                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                                         <label for="email_address_2">Email Address</label>
@@ -35,32 +37,30 @@
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" id="email_address_2" class="form-control" placeholder="Enter your email address">
+                                                <input type="text" id="email_address_2" name="name" class="form-control" placeholder="Enter your Area">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row clearfix">
                                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                        <label for="password_2">Password</label>
+                                        <label for="email_address_2">District</label>
                                     </div>
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="password" id="password_2" class="form-control" placeholder="Enter your password">
+                                                <select name="districts[]" multiple="multiple" id="email_address_2" class="form-control">
+                                                    @foreach($districts as $key => $district)
+                                                    <option value="{{$key}}">{{$district}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row clearfix">
                                     <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                                        <input type="checkbox" id="remember_me_3" class="filled-in">
-                                        <label for="remember_me_3">Remember Me</label>
-                                    </div>
-                                </div>
-                                <div class="row clearfix">
-                                    <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                                        <button type="button" class="btn btn-primary m-t-15 waves-effect">LOGIN</button>
+                                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Save</button>
                                     </div>
                                 </div>
                             </form>

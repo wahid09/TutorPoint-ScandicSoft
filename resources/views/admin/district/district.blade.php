@@ -27,40 +27,23 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <form class="form-horizontal">
+                            <form class="form-horizontal" action="{{route('district.store')}}" method="POST">
+                                {{ csrf_field() }}
                                 <div class="row clearfix">
                                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                        <label for="email_address_2">Email Address</label>
+                                        <label for="name">District Name</label>
                                     </div>
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" id="email_address_2" class="form-control" placeholder="Enter your email address">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row clearfix">
-                                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                        <label for="password_2">Password</label>
-                                    </div>
-                                    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                                        <div class="form-group">
-                                            <div class="form-line">
-                                                <input type="password" id="password_2" class="form-control" placeholder="Enter your password">
+                                                <input type="text" id="name" name="name" class="form-control" placeholder="Enter District Name">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row clearfix">
                                     <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                                        <input type="checkbox" id="remember_me_3" class="filled-in">
-                                        <label for="remember_me_3">Remember Me</label>
-                                    </div>
-                                </div>
-                                <div class="row clearfix">
-                                    <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                                        <button type="button" class="btn btn-primary m-t-15 waves-effect">LOGIN</button>
+                                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Save</button>
                                     </div>
                                 </div>
                             </form>

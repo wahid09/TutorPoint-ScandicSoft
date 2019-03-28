@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\user\area;
+use App\Model\user\district;
+use Illuminate\Http\Request;
 
 class AreaController extends Controller
 {
@@ -14,7 +16,8 @@ class AreaController extends Controller
      */
     public function index()
     {
-        return view('admin/area/show');
+        $districts = district::all();
+        return view('admin.area.show', compact('districts'));
     }
 
     /**
@@ -24,7 +27,7 @@ class AreaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.area.area');
     }
 
     /**
@@ -35,7 +38,16 @@ class AreaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+        ]);
+
+        $area = new area;
+        $area->name = $request->area;
+        $area->save();
+
+
+        return redirect(route('area.index'));
     }
 
     /**
