@@ -1,4 +1,7 @@
 @extends('admin/layouts/app')
+@section('head')
+<link href="{{asset('admin/plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />
+@endsection
 @section('main-content')
 	<section class="content">
         <div class="container-fluid">
@@ -49,9 +52,9 @@
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <select name="districts[]" multiple="multiple" id="email_address_2" class="form-control">
-                                                    @foreach($districts as $key => $district)
-                                                    <option value="{{$key}}">{{$district}}</option>
+                                                <select id="email_address_2" name="district_id" class="form-control">
+                                                    @foreach($districts as $district)
+                                                    <option value="{{$district->id}}">{{$district->name}}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -64,11 +67,13 @@
                                     </div>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>
             </div>
             <!-- #END# Horizontal Layout -->
+           
         </div>
     </section>
 @endsection

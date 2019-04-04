@@ -16,8 +16,8 @@ class AreaController extends Controller
      */
     public function index()
     {
-        $districts = district::all();
-        return view('admin.area.show', compact('districts'));
+        $areas = area::all();
+        return view('admin.area.show', compact('areas'));
     }
 
     /**
@@ -27,7 +27,8 @@ class AreaController extends Controller
      */
     public function create()
     {
-        return view('admin.area.area');
+        $districts = district::all();
+        return view('admin.area.area', compact('districts', $districts));
     }
 
     /**
@@ -43,7 +44,8 @@ class AreaController extends Controller
         ]);
 
         $area = new area;
-        $area->name = $request->area;
+        $area->name = $request->name;
+        $area->district_id = $request->district_id;
         $area->save();
 
 
