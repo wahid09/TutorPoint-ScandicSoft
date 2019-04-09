@@ -217,3 +217,5 @@
         <script type="text/javascript" src="{{ asset('user/vendor/jquery.countTo.js') }}"></script>
         <!-- Theme js -->
         <script type="text/javascript" src="{{ asset('user/js/theme.js') }}"></script>
+        @section('bootm')
+        @show

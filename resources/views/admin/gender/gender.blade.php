@@ -1,17 +1,21 @@
 @extends('admin/layouts/app')
+@section('head')
+<link href="{{asset('admin/plugins/bootstrap-select/css/bootstrap-select.css')}}" rel="stylesheet" />
+@endsection
 @section('main-content')
-	<section class="content">
+    <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>Edit District</h2>
+                <h2>Add Student Gender</h2>
             </div>
             <!-- Horizontal Layout -->
+            @include('includes/error')
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Edit District
+                                Add Student Gender
                             </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
@@ -27,17 +31,16 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <form class="form-horizontal" action="{{route('district.update', $district->id)}}" method="POST">
-                                {{ csrf_field() }}
-                                {{method_field('PUT')}}
+                            <form class="form-horizontal" action="{{route('gender.store')}}" method="POST">
+                                {{csrf_field()}}
                                 <div class="row clearfix">
                                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                                        <label for="name">District Name</label>
+                                        <label for="email_address_2">Add Student Gender</label>
                                     </div>
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input type="text" id="name" name="name" class="form-control" value="{{$district->name}}">
+                                                <input type="text" id="email_address_2" name="gender" class="form-control" placeholder="Enter your Area">
                                             </div>
                                         </div>
                                     </div>
@@ -48,11 +51,13 @@
                                     </div>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>
             </div>
             <!-- #END# Horizontal Layout -->
+           
         </div>
     </section>
 @endsection

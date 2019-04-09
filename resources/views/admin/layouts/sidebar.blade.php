@@ -67,9 +67,94 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>Areas</span>
+                                </a>
+                                <ul class="ml-menu">
+
+                                    <li>
+                                        <a href="{{route('area.index')}}">Manage Area</a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <!-- //new -->
+                    <!-- Other information -->
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">widgets</i>
+                            <span>Tution Information</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>Tution Medium</span>
+                                </a>
+                                <ul class="ml-menu">
+                                    <li>
+                                        <a href="{{route('medium.index')}}">Manage Tution medium</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>Class</span>
+                                </a>
+                                <ul class="ml-menu">
+                                    <li>
+                                        <a href="{{route('class.index')}}">Manage Class</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>Subject</span>
+                                </a>
+                                <ul class="ml-menu">
+
+                                    <li>
+                                        <a href="{{route('subject.index')}}">Manage Subject</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>Tution Days</span>
+                                </a>
+                                <ul class="ml-menu">
+
+                                    <li>
+                                        <a href="{{route('day.index')}}">Manage Tution Days</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>Salary</span>
+                                </a>
+                                <ul class="ml-menu">
+
+                                    <li>
+                                        <a href="{{route('salary.index')}}">Manage Salary</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>Gender of Student</span>
+                                </a>
+                                <ul class="ml-menu">
+
+                                    <li>
+                                        <a href="{{route('gender.index')}}">Manage Gender</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--  // Other information-->
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">assignment</i>

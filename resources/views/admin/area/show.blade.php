@@ -19,6 +19,7 @@
                             <h2>
                                 Area List Table
                             </h2>
+                            <a href="{{route('area.create')}}" class="col-lg-offset-5 btn btn-success">Add New</a>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -41,6 +42,7 @@
                                             <th>District Name</th>
                                             <th>Area Name</th>
                                             <th>Action</th>
+                                           
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -49,17 +51,27 @@
                                             <th>District Name</th>
                                             <th>Area Name</th>
                                             <th>Action</th>
+                                            
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         @foreach($areas as $area)
                                         <tr>
                                             <td>{{$loop->index +1}}</td>
-                                            <td>{{$area->district_id}}</td>
+                                            <td>{{$area->district->name}}</td>
                                             <td>{{$area->name}}</td>
                                             <td>
-                                                <a href="#" class="btn btn-success">Edit</i></a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
+                                                <a href="{{route('area.edit', $area->id)}}" class="btn btn-success">Edit</i></a>
+                                                <form id="delete-form-{{$area->id}}" method="post" action="{{route('area.destroy', $area->id)}}" style="display: none;">
+                                                    {{csrf_field()}}
+                                                    {{method_field('DELETE')}}
+                                                </form>
+                                                <a href="#" onclick="if(confirm('Are you sure, You want to delete this??'))
+                                                {
+                                                    event.preventDefault();document.getElementById('delete-form-{{$area->id}}').submit();
+                                                }else{
+                                                    event.preventDefault();
+                                                }" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                         @endforeach

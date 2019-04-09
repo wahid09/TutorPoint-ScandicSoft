@@ -4,11 +4,11 @@
     <link href="{{asset('admin/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css')}}" rel="stylesheet">
 @endsection
 @section('main-content')
-	<section class="content">
+    <section class="content">
         <div class="container-fluid">
             <div class="block-header">
                 <h2>
-                    District List Table
+                    Subject List Table
                 </h2>
             </div>
             <!-- Exportable Table -->
@@ -17,9 +17,9 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                District List Table
+                                Subject List Table
                             </h2>
-                            <a href="{{route('district.create')}}" class="col-lg-offset-5 btn btn-success">Add New</a>
+                            <a href="{{route('subject.create')}}" class="col-lg-offset-5 btn btn-success">Add New</a>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -39,34 +39,28 @@
                                     <thead>
                                         <tr>
                                             <th>SL. No</th>
-                                            <th>Name</th>
+                                            <th>Subject</th>
                                             <th>Action</th>
+                                           
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>SL. No</th>
-                                            <th>Name</th>
+                                            <th>Subject</th>
                                             <th>Action</th>
+                                            
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        @foreach($districts as $district)
+                                    @foreach($subjectes as $subject)
                                         <tr>
                                             <td>{{$loop->index +1}}</td>
-                                            <td>{{$district->name}}</td>
+                                            <td>{{$subject->name}}</td>
                                             <td>
-                                                <a href="{{route('district.edit', $district->id)}}" class="btn btn-success">Edit</i></a>
-                                                <form id="delete-form-{{$district->id}}" method="post" action="{{route('district.destroy', $district->id)}}" style="display: none;">
-                                                    {{csrf_field()}}
-                                                    {{method_field('DELETE')}}
-                                                </form>
-                                                <a href="#" onclick="if(confirm('Are you sure, You want to delete this??'))
-                                                {
-                                                    event.preventDefault();document.getElementById('delete-form-{{$district->id}}').submit();
-                                                }else{
-                                                    event.preventDefault();
-                                                }" class="btn btn-danger">Delete</a>
+                                                <a href="" class="btn btn-success">Edit</i></a>
+    
+                                                <a href="" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                         @endforeach

@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Model\user\area;
-use App\Model\user\district;
+use App\Model\user\day;
 use Illuminate\Http\Request;
 
-class AreaController extends Controller
+class dayCntroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,8 @@ class AreaController extends Controller
      */
     public function index()
     {
-        $areas = area::all();
-        //return $areas;
-        return view('admin.area.show', compact('areas'));
+        $days = day::all();
+        return view('admin.day.show', compact('days'));
     }
 
     /**
@@ -28,8 +26,7 @@ class AreaController extends Controller
      */
     public function create()
     {
-        $districts = district::all();
-        return view('admin.area.area', compact('districts', $districts));
+        return view('admin.day.day');
     }
 
     /**
@@ -40,20 +37,16 @@ class AreaController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
+         $this->validate($request, [
             'name' => 'required',
         ]);
 
-        $area = new area;
-        $area->name = $request->name;
-        $area->district_id = $request->district_id;
-        //$area->districts()->sync($request->districts);
-        $area->save();
-
-        //return $area;
+        $days = new day;
+        $days->name = $request->name;
+        $days->save();
 
 
-        return redirect(route('area.index'));
+        return redirect(route('day.index'));
     }
 
     /**
@@ -75,9 +68,7 @@ class AreaController extends Controller
      */
     public function edit($id)
     {
-        $area = area::where('id', $id)->first();
-        //return $areas;
-        return view('admin.area.edit', compact('area'));
+        //
     }
 
     /**
@@ -89,16 +80,7 @@ class AreaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'name' => 'required',
-        ]);
-        $area = area::find($id);
-        $area->name = $request->name;
-        //$area->district_id = $request->district_id;
-        $area->save();
-
-        return redirect(route('area.index'));
-
+        //
     }
 
     /**
@@ -109,7 +91,6 @@ class AreaController extends Controller
      */
     public function destroy($id)
     {
-        area::where('id', $id)->delete();
-        return redirect()->back();
+        //
     }
 }

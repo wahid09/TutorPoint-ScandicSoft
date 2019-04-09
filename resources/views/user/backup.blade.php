@@ -30,133 +30,132 @@
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="search-group">
-                                        <form>
+                                        <form action="{{route('requesttutor.store')}}" method="POST">
+                                            {{csrf_field()}}
                                             <div class="form-group row">
                                                 <label for="fullname" class="col-sm-3 col-form-label">Full Name:</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="fullname" placeholder="Enter your full name">
+                                                    <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" name="name">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="selectdist" class="col-sm-3 col-form-label">Select District:</label>
                                                 <div class="col-sm-9">
-                                                    <select name="" id="selectdist" class="form-control">
+                                                    <select name="district_id" id="selectdist" class="form-control">
                                                         <option value="1">---Select District---</option>
-                                                        <option value="1">Kishoregonj</option>
+                                                        @foreach($districts as $key =>$district)
+                                                        <option value="{{$key}}">{{$district}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="selectarea" class="col-sm-3 col-form-label">Select Area:</label>
                                                 <div class="col-sm-9">
-                                                    <select name="" id="selectarea" class="form-control">
-                                                        <option value="1">---Select Area---</option>
-                                                        <option value="1">Kishoregonj</option>
+                                                    <select name="aarea" id="selectarea" class="form-control">
+
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="selectmedium" class="col-sm-3 col-form-label">Select Medium:</label>
                                                 <div class="col-sm-9">
-                                                    <select name="" id="selectmedium" class="form-control">
+                                                    <select name="medium_id" id="selectmedium" class="form-control">
                                                         <option value="1">---Select Medium---</option>
-                                                        <option value="1">Bangla Medium</option>
-                                                        <option value="1">English Medium</option>
+                                                        @foreach($mediums as $key =>$value)
+                                                        <option value="{{$key}}">{{$value}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="selectclass" class="col-sm-3 col-form-label">Select Class:</label>
                                                 <div class="col-sm-9">
-                                                    <select name="" id="selectclass" class="form-control">
+                                                    <select name="class_id" id="selectclass" class="form-control">
                                                         <option value="1">---Select Class---</option>
-                                                        <option value="1">Database</option>
-                                                        <option value="1">Programming</option>
+                                                        @foreach($classes as $key =>$value)
+                                                        <option value="{{$key}}">{{$value}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="selectsub" class="col-sm-3 col-form-label">Select Subject:</label>
                                                 <div class="col-sm-9">
-                                                    <select name="" id="selectsub" class="form-control">
+                                                    <select name="subject_id" id="selectsub" class="form-control">
                                                         <option value="1">---Select Subject---</option>
-                                                        <option value="1">Database</option>
-                                                        <option value="1">Programming</option>
+                                                        @foreach($subjects as $key =>$value)
+                                                        <option value="{{$key}}">{{$value}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="selectschool" class="col-sm-3 col-form-label">Student School/ College:</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="selectschool" placeholder="Enter your school/college name">
+                                                    <input type="text" class="form-control" id="selectschool" placeholder="Enter your school/college name" name="school_name">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="selectdays" class="col-sm-3 col-form-label">Days per week:</label>
                                                 <div class="col-sm-9">
-                                                    <select name="" id="selectdays" class="form-control">
-                                                        <option value="1">---Select Days/week---</option>
-                                                        <option value="1">3 days/week</option>
-                                                        <option value="1">4 days/week</option>
+                                                    <select name="day_id" id="selectdays" class="form-control">
+                                                        <option value="1">---Select Tution days per Week---</option>
+                                                        @foreach($days as $key =>$value)
+                                                        <option value="{{$key}}">{{$value}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="selectgender" class="col-sm-3 col-form-label">Gender of Student:</label>
                                                 <div class="col-sm-9">
-                                                    <select name="" id="selectgender" class="form-control">
-                                                        <option value="1">--- Any Gender ---</option>
-                                                        <option value="1">Male</option>
-                                                        <option value="1">Female</option>
+                                                    <select name="gender_id" id="selectgender" class="form-control">
+                                                        <option value="1">---Select Student Gender---</option>
+                                                        @foreach($sex as $key =>$value)
+                                                        <option value="{{$key}}">{{$value}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="selectsalary" class="col-sm-3 col-form-label">Salary Range:</label>
                                                 <div class="col-sm-9">
-                                                    <select name="" id="selectsalary" class="form-control">
-                                                        <option value="1">Salary Range</option>
-                                                        <option value="1">300 - 4000</option>
-                                                        <option value="1">4000 - 5000</option>
+                                                    <select name="salary_id" id="selectsalary" class="form-control">
+                                                        <option value="1">---Select Salary Range---</option>
+                                                        @foreach($salaries as $key =>$value)
+                                                        <option value="{{$key}}">{{$value}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="form-group row">
-                                                <label for="selectgender" class="col-sm-3 col-form-label">Desired Tutor Gender:</label>
-                                                <div class="col-sm-9">
-                                                    <select name="" id="selectgender" class="form-control">
-                                                        <option value="1">Any Gender</option>
-                                                        <option value="1">Male</option>
-                                                        <option value="1">Female</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            
 
                                             <div class="form-group row">
                                                 <label for="adderss" class="col-sm-3 col-form-label">Detail Address:</label>
                                                 <div class="col-sm-9">
-                                                    <textarea name="" rows="3" cols="5" id="adderss" class="form-control"></textarea>
+                                                    <textarea name="address" rows="3" cols="5" id="adderss" class="form-control"></textarea>
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
                                                 <label for="mobile" class="col-sm-3 col-form-label">Mobile:</label>
                                                 <div class="col-sm-9">
-                                                    <input class="form-control" id="mobile" maxlength="11" name="" required="required" size="11" type="tel" value="" placeholder="Enter your mobile number">
+                                                    <input class="form-control" id="mobile" maxlength="11" name="mobile" required="required" size="11" type="tel" value="" placeholder="Enter your mobile number">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
                                                 <label for="email" class="col-sm-3 col-form-label">Email:</label>
                                                 <div class="col-sm-9">
-                                                    <input class="form-control" id="email" maxlength="11" name="" required="required" size="11" type="email" value="" placeholder="Enter your Email">
+                                                    <input class="form-control" id="email" maxlength="11" name="email" required="required" size="11" type="email" value="" placeholder="Enter your Email">
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
                                                 <label for="adderss" class="col-sm-3 col-form-label">Additional Info in details (if multiple subjects mention here):</label>
                                                 <div class="col-sm-9">
-                                                    <textarea name="" rows="5" cols="5" id="adderss" class="form-control"></textarea>
+                                                    <textarea name="note" rows="5" cols="5" id="adderss" class="form-control"></textarea>
                                                 </div>
                                             </div>
 
@@ -186,5 +185,34 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+    $(document).ready(function() {
+        $('select[name="state"]').on('change', function() {
+            var stateID = $(this).val();
+            if(stateID) {
+                $.ajax({
+                    url: '/myform/ajax/'+stateID,
+                    type: "GET",
+                    dataType: "json",
+                    success:function(data) {
+
+                        
+                        $('select[name="city"]').empty();
+                        $.each(data, function(key, value) {
+                            $('select[name="city"]').append('<option value="'+ key +'">'+ value +'</option>');
+                        });
+
+
+                    }
+                });
+            }else{
+                $('select[name="city"]').empty();
+            }
+        });
+    });
+</script>
+
+@endsection
+@section('bootm')
 
 @endsection

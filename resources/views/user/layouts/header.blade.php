@@ -45,15 +45,15 @@
                                     </li>
                                     <li class="dropdown-holder"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Search Tutors</a>
                                     </li>
-                                    <li class="dropdown-holder"><a href="{{URL::to('/requesttutor')}}">Request a Tutor</a>
+                                    <li class="dropdown-holder"><a href="{{URL::to('requesttutor')}}">Request a Tutor</a>
                                     </li>
-                                    <li class="dropdown-holder"><a href="premiumtutor.html">Premium Tutors</a>
+                                    <li class="dropdown-holder"><a href="{{route('request.create')}}">Premium Tutors</a>
                                     </li>
-                                    <li class="dropdown-holder"><a href="availabletution.html">Tutions</a>
+                                    <li class="dropdown-holder"><a href="{{route('request.index')}}">Tutions</a>
                                     </li>
                                     <li class="dropdown-holder"><a href="{{URL::to('loginregister')}}">Join us</a>
                                     </li>
-                                    <li><a href="#">contact</a></li>
+                                    <li><a href="{{route('login')}}">Login</a></li>
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->

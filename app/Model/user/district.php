@@ -8,7 +8,7 @@ class district extends Model
 {
     protected $table = 'districts';
 
-    public function area(){
-    	return $this->hasMany('App\area');
+    public function areas(){
+    	return $this->hasMany('App\Model\user\area');
     }
 }

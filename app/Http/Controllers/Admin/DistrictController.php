@@ -67,7 +67,9 @@ class DistrictController extends Controller
      */
     public function edit($id)
     {
-        //
+        $district = district::where('id', $id)->first();
+        //return $district;
+        return view('admin.district.edit', compact('district'));
     }
 
     /**
@@ -79,7 +81,15 @@ class DistrictController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+
+        $district = district::find($id);
+        $district->name = $request->name;
+        $district->save();
+
+        return redirect(route('district.index'))->with('success', 'Successfully added district');
     }
 
     /**
@@ -90,6 +100,7 @@ class DistrictController extends Controller
      */
     public function destroy($id)
     {
-        //
+        district::where('id', $id)->delete();
+        return redirect()->back();
     }
 }
