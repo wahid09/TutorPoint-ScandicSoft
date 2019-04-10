@@ -16,28 +16,29 @@
                     <div class="col-md-12 request-tutor">
                         <div class="row">
                             <div class="request-for-tutor">
-                                <h3>TUITIONS</h3>
+                                <h3>TUITION DETAILS INFO</h3>
                             </div>
                         </div>
                         @include('includes.message')
                         <div class="row">
                             <div class="row">
                                 <div class="col-md-8">
+                                    <!--
                                     <div class="request-head">
-                                        <h4 class="pull-left">Available Tuitions ({{$requests->count()}})</h4>
+                                        <h4 class="pull-left">Available Tuitions ()</h4>
                                         <a href="{{route('request.create')}}" class="pull-right">Post a Tuition / Request a Tutor</a>
                                     </div>
+                                -->
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="search-group">
                                         <!--    Tution Card -->
-                                        @foreach($requests as $value)
                                         <div class="style_border">
                                             <div class="row">
-                                                <div class="col-md-12 c-header">
-                                                <h4 class="c-title">{{$value->district->name}}</h4>
+                                                <div class="col-md-12 ct-header">
+                                                <h4 class="ct-title">Tution@ &nbsp;{{$request->district->name}}</h4>
                                           </div>
                                             </div>
                                           <div class="row">
@@ -47,23 +48,27 @@
                                                     <tbody>
                                                         <tr>
                                                             <td colspan="2" class="c-text">Tuition ID #:</td>
-                                                            <td colspan="6" class="c2-text">{{$value->id.mt_rand(1000000, 9999999)}}</td>
+                                                            <td colspan="6" class="c2-text">{{$request->id.mt_rand(1000000, 9999999)}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" class="c-text">Full Name:</td>
+                                                            <td colspan="6" class="c2-text">{{$request->name}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="2" class="c-text">Class/ Subject:</td>
-                                                            <td colspan="6" class="c2-text">{{$value->class->name}},&nbsp;{{$value->subject->name}}</td>
+                                                            <td colspan="6" class="c2-text">Data</td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="2" class="c-text">Location:</td>
-                                                            <td colspan="6" class="c2-text">{{$value->district->name}}, &nbsp;{{$value->address}}</td>
+                                                            <td colspan="6" class="c2-text">Data</td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="2" class="c-text">Days:</td>
-                                                            <td colspan="6" class="c2-text">{{$value->day->name}}</td>
+                                                            <td colspan="6" class="c2-text">Data</td>
                                                         </tr>
                                                         <tr>
                                                             <td colspan="2" class="c-text">Salary Range:</td>
-                                                            <td colspan="6" class="c2-text">{{$value->salary->name}}</td>
+                                                            <td colspan="6" class="c2-text">Data</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -72,13 +77,11 @@
                                           </div>
                                           <div class="row">
                                               <div class="col-md-12 c-footer">
-                                                <p>Posted on: <strong>{{ \Carbon\Carbon::parse($value->from_date)->format('d/m/Y')}}</strong></p>
-                                                <a href="{{route('login')}}">Login to view contact information</a></br>
-                                                <a href="{{route('request.edit', $value->id)}}" class="btn btn-primary">View Details</a>
+                                                <a href="{{route('login')}}" class="btn btn-primary">Login</a>
+                                                <a href="#" class="btn btn-primary">View Details</a>
                                               </div>
                                           </div>
                                         </div>
-                                        @endforeach
                                         <!--   // Tution Card -->
                                         
                                     </div>
@@ -101,31 +104,31 @@
             </div>
         </div>
         <script type="text/javascript">
-    $(document).ready(function() {
-        $('select[name="state"]').on('change', function() {
-            var stateID = $(this).val();
-            if(stateID) {
-                $.ajax({
-                    url: '/myform/ajax/'+stateID,
-                    type: "GET",
-                    dataType: "json",
-                    success:function(data) {
+        $(document).ready(function() {
+            $('select[name="state"]').on('change', function() {
+                var stateID = $(this).val();
+                if(stateID) {
+                    $.ajax({
+                        url: '/myform/ajax/'+stateID,
+                        type: "GET",
+                        dataType: "json",
+                        success:function(data) {
 
-                        
-                        $('select[name="city"]').empty();
-                        $.each(data, function(key, value) {
-                            $('select[name="city"]').append('<option value="'+ key +'">'+ value +'</option>');
-                        });
+                            
+                            $('select[name="city"]').empty();
+                            $.each(data, function(key, value) {
+                                $('select[name="city"]').append('<option value="'+ key +'">'+ value +'</option>');
+                            });
 
 
-                    }
-                });
-            }else{
-                $('select[name="city"]').empty();
-            }
+                        }
+                    });
+                }else{
+                    $('select[name="city"]').empty();
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 @endsection
 @section('bootm')

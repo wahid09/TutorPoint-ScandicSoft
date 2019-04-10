@@ -3868,3 +3868,51 @@ text-align: left;
     margin-top: 15px;
     text-align: center;
 }
+
+/* ================= Tution ===============*/
+.c-header{
+    background: #CD2122;
+    color: white;
+    margin-top: -10px;
+    padding-top: 0px;
+}
+.c-title{
+    color: white;
+    padding: 10px;
+}
+.t-align{
+    text-align: left;
+}
+.c-text{
+    font-size: 14px;
+    text-align: left;
+    font-weight:bold;
+}
+.c2-text{
+    font-size: 14px;
+    text-align: left;
+}
+#table1 {
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+.c-footer{
+    text-align: right;
+}
+.style_border {
+    background-color: #fff;
+    color: #888;
+    padding: 10px;
+    border: 1px solid #DBDBDB;
+    border-radius: 0px;
+    box-shadow: 0 0 8px #DBDBDB;
+    margin-top: 3px;
+}
+.ct-header{
+    margin-top: -10px;
+    padding-top: 0px;
+}
+.ct-title{
+    color: black;
+    padding-left: 8px;
+}

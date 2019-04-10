@@ -11,4 +11,7 @@ class district extends Model
     public function areas(){
     	return $this->hasMany('App\Model\user\area');
     }
+    public function tutorrequests(){
+    	return $this->hasMany('App\Model\user\tutorrequest');
+    }
 }

@@ -18,7 +18,8 @@ class tutorrequestController extends Controller
      */
     public function index()
     {
-        return view('user.requesttutor.show');
+        $requests = tutorrequest::all();
+        return view('user.requesttutor.show', compact('requests'));
     }
 
     /**
@@ -101,7 +102,9 @@ class tutorrequestController extends Controller
      */
     public function edit($id)
     {
-        //
+        $request = tutorrequest::where('id', $id)->first();
+        //return $requests;
+        return view('user.requesttutor.edit', compact('request'));
     }
 
     /**

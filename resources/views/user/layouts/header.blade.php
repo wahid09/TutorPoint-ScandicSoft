@@ -45,9 +45,9 @@
                                     </li>
                                     <li class="dropdown-holder"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Search Tutors</a>
                                     </li>
-                                    <li class="dropdown-holder"><a href="{{URL::to('requesttutor')}}">Request a Tutor</a>
+                                    <li class="dropdown-holder"><a href="{{route('request.create')}}">Request a Tutor</a>
                                     </li>
-                                    <li class="dropdown-holder"><a href="{{route('request.create')}}">Premium Tutors</a>
+                                    <li class="dropdown-holder"><a href="#">Premium Tutor</a>
                                     </li>
                                     <li class="dropdown-holder"><a href="{{route('request.index')}}">Tutions</a>
                                     </li>
