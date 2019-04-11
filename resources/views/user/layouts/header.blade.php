@@ -53,7 +53,28 @@
                                     </li>
                                     <li class="dropdown-holder"><a href="{{URL::to('loginregister')}}">Join us</a>
                                     </li>
+                                    @guest
                                     <li><a href="{{route('login')}}">Login</a></li>
+                                    @else
+                                    <li  class="dropdown-holder">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                                <ul class="sub-menu">
+
+                                    <li><a class="tran3s" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a></li>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{csrf_field()}}
+                                    </form>
+                                
+                            </ul>
+                            </li>
+                        @endguest
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->
