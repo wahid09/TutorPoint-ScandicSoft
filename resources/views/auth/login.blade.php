@@ -84,10 +84,9 @@
                                 <h4>Help & Info:</h4>
                             </div>
                             <div class="faq-body">
-                                <h5>Q. Is registration free of cost ?</h5>
-                                <p>Ans: Yes registration as a tutor is free of cost. Permium tutors are placed on the front pages. More features are coming soon.</p>
-                                <h5>Q. Why email need to be verified ?</h5>
-                                <p>Ans: Email needs to be verified to make confirmed that you own that email address and avoid spam.</p>
+                                <h5>Q. What happen If i can't login ?</h5>
+                                <p>Ans: If you cant login but you are registered then click forgot password and enter your email, you login details will be sent to your email with email verification link.</p>
+                                
                             </div>
                         </div>
                     </div>

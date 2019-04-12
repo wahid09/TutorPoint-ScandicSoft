@@ -9,6 +9,9 @@ Route::group(['namespace'=>'User'], function(){
 	Route::resource('request', 'tutorrequestController');
 	//Route::get('myform/ajax/{id}',array('as'=>'myform.ajax','uses'=>'RequestTutorController@myformAjax'));
 	Route::get('loginregister', 'AllController@index');
+
+
+	//Route::resource('profile', 'TutorProfileController');
 });
 
 //Admin panel route
@@ -39,5 +42,6 @@ Route::group(['namespace' => 'Admin'], function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::resource('profile', 'TutorProfileController');
 Route::get('verify/{token}', 'verifyController@verify')->name('verify');
+
