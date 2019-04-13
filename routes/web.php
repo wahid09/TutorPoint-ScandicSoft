@@ -43,5 +43,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('profile', 'TutorProfileController');
+Route::resource('userphoto', 'UserPhotoController');
 Route::get('verify/{token}', 'verifyController@verify')->name('verify');
 

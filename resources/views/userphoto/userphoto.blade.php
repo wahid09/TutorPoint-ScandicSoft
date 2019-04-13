@@ -35,7 +35,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="col-md-12 u-profile">
-                                            <img src="/uploads/avatars/{{$user->avatar}}" alt="user-image" class="u-image-small">
+                                            <img src="{{asset('user/images/user/user.png')}}" alt="user-image" class="u-image-small">
                                             <p class="u-image-small-text">My Profile</p>
                                         </div>
                                     </div>
@@ -57,21 +57,19 @@
                                     <div class="col-md-12">
                                         <div class="col-md-4">
                                             <img src="/uploads/avatars/{{$user->avatar}}" class="user-big-img" alt="user image">
-                                            <p><strong>Member Science:</strong> 04/10/2019</p>
-                                            <a href="#"><i class="fa fa-facebook-square"></i></a>
-                                            <a href="#"><i class="fa fa-twitter-square"></i></a>
-                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                            <p><strong>Change Photo:</strong></p>
                                         </div>
-                                        <div class="col-md-8">
-                                            <h4>{{$user->name}}</h4>
-                                            <p><strong>ID #</strong>12345</p>
-                                            <p><strong>Experience:</strong>12345</p>
-                                            <p><strong>Qualification:</strong>12345</p>
-                                            <p><strong>Area Covered:</strong>12345</p>
-                                            <p><strong>Teaching:</strong>12345</p>
-                                            <p><strong>Phone:</strong>12345</p>
-                                            <p><strong>Email:</strong>12345</p>
-                                            <a href="#" class="pull-right"><i class="fa fa-edit"></i>Edit info</a>
+                                        <div class="col-md-4 user-img">
+                                            <form action="{{route('userphoto.store')}}" method="POST" enctype="multipart/form-data">
+                                                {{csrf_field()}}
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlFile1">Choose your Photo</label>
+                                                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="avatar">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="submit" class="btn btn-primary" value="Upload Photo">
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

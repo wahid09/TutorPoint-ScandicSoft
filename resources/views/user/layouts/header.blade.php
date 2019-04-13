@@ -61,9 +61,9 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <ul class="sub-menu">
-                                    <li><a class="tran3s" href="{{route('profile.index')}}">My Profile
+                                    <li><i class="fa fa-user"></i><a class="tran3s" href="{{route('profile.index')}}">My Profile
                                         </a></li>
-                                    <li><a class="tran3s" href="{{ route('logout') }}"
+                                    <li><i class="fa fa-sign-out-alt"></i><a class="tran3s" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                    document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}

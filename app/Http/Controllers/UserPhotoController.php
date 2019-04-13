@@ -2,24 +2,26 @@
 
 namespace App\Http\Controllers;
 
+//use Illuminate\Auth\Middleware\Auth;
+//use Illuminate\Auth\user;
 use Illuminate\Http\Request;
 use Auth;
+use Image;
 
-class TutorProfileController extends Controller
+class UserPhotoController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    //public function __construct()
+    //{
+       // $this->middleware('auth');
+   // }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
     {
-        return view('profile.show', array('user' => Auth::user()));
+        //
     }
 
     /**
@@ -29,7 +31,8 @@ class TutorProfileController extends Controller
      */
     public function create()
     {
-        //
+        //$users = user::get();
+        return view('userphoto.userphoto', array('user' => Auth::user()) );
     }
 
     /**
@@ -40,7 +43,16 @@ class TutorProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /*return $request->all();*/
+        if($request->hasFile('avatar')){
+            $avatar = $request->file('avatar');
+            $filename = time(). '.' .$avatar->getClientOriginalExtension();
+            Image::make($avatar)->resize(300, 300)->save(public_path('/uploads/avatars/' .$filename));
+            $user = Auth::user();
+            $user->avatar = $filename;
+            $user->save();
+        }
+        return view('userphoto.userphoto', array('user' => Auth::user()) );
     }
 
     /**
