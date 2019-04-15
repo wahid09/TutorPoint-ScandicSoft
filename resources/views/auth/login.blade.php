@@ -61,19 +61,24 @@
                                                 <label>
                                                     <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
                                                 </label>
+                                                <a class="fore" href="{{ route('password.request') }}">
+                                                Forgot Your Password?
+                                            </a>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <div class="col-md-8 col-md-offset-4">
-                                            <button type="submit" class="btn btn-primary">
+                                            <button type="submit" class="btn btn-primary btn-log">
                                                 Login
                                             </button>
-
+                                            <!--
                                             <a href="{{ route('password.request') }}">
                                                 Forgot Your Password?
                                             </a>
+                                        -->
+                                            <p class="reg">Don't have an account?Register as a <a href="{{route('register')}}">Tutor</a></p>
                                         </div>
                                     </div>
                                 </form>

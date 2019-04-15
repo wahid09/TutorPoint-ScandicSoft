@@ -3926,6 +3926,7 @@ text-align: left;
     float: left;
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 .u-image-small-text {
     font-size: 22px;
@@ -3969,4 +3970,13 @@ text-align: left;
 }
 .user-img{
     margin-top: 80px;
+}
+.fore{
+    margin-left: 90px;
+}
+.btn-log{
+    margin-left: 130px;
+}
+.reg{
+    margin-top: 10px;
 }
