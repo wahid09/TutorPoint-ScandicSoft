@@ -65,13 +65,13 @@
                                         <div class="col-md-8">
                                             <h4>{{$user->name}}</h4>
                                             <p><strong>ID #</strong>12345</p>
-                                            <p><strong>Experience:</strong>12345</p>
-                                            <p><strong>Qualification:</strong>12345</p>
-                                            <p><strong>Area Covered:</strong>12345</p>
+                                            <p><strong>Experience:</strong>&nbsp;{{$info->experiance}}</p>
+                                            <p><strong>Qualification:</strong>&nbsp;{{$edu->education_lavel}} in {{$edu->major}}</p>
+                                            <p><strong>Area Covered:</strong>&nbsp;{{$info->address}}</p>
                                             <p><strong>Teaching:</strong>12345</p>
-                                            <p><strong>Phone:</strong>12345</p>
-                                            <p><strong>Email:</strong>12345</p>
-                                            <a href="#" class="pull-right"><i class="fa fa-edit"></i>Edit info</a>
+                                            <p><strong>Phone:</strong>&nbsp;{{$info->phone}}</p>
+                                            <p><strong>Email:</strong>&nbsp;{{Auth::user()->email}}</p>
+                                            <a href="{{route('personalinformation.show', $info->id)}}" class="pull-right"><i class="fa fa-edit"></i>Edit info</a>
                                         </div>
                                     </div>
                                 </div>
@@ -87,8 +87,8 @@
                                     <a href="{{route('profile.index')}}" class="list-group-item list-group-item-action"><i class="fa fa-user"></i>&nbsp;My Profile</a>
                                     <a href="{{route('userphoto.create')}}" class="list-group-item list-group-item-action"><i class="fa fa-camera"></i>&nbsp;My Photo</a>
                                     <a href="{{route('personalinformation.create')}}" class="list-group-item list-group-item-action"><i class="fa fa-info"></i>&nbsp; Personal Inforemation</a>
-                                    <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-book"></i>&nbsp; Academic Inforemation</a>
-                                    <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-info"></i>&nbsp; Tution Related Inforemation</a>
+                                    <a href="{{route('academic.create')}}" class="list-group-item list-group-item-action"><i class="fa fa-book"></i>&nbsp; Academic Inforemation</a>
+                                    <a href="{{route('tution.create')}}" class="list-group-item list-group-item-action"><i class="fa fa-info"></i>&nbsp; Tution Related Inforemation</a>
                                     <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-edit"></i>&nbsp; Change Password</a>
                                 </div>
                             </div>

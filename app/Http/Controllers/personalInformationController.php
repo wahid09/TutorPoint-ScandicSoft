@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\user\PersonalInfo;
 use Auth;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class personalInformationController extends Controller
@@ -49,7 +50,8 @@ class personalInformationController extends Controller
 
         $info = new PersonalInfo;
 
-        $info->bod = $request->bod;
+        //$info->bod = $request->bod;
+        $info->bod = Carbon::parse($request->bod)->format('y-m-d');
         $info->blood = $request->blood;
         $info->interest = $request->interest;
         $info->sex = $request->sex;
@@ -58,11 +60,12 @@ class personalInformationController extends Controller
         $info->address = $request->address;
         $info->phone = $request->phone;
         $info->experiance = $request->experiance;
-        $info->user_id = Auth::user();
+        $info->user_id = Auth::user()->id;
 
         $info->save();
 
-        return redirect(route('profile.show'))->with('success', 'Successfully updated your information');
+        //return redirect(route('profile.show'))->with('success', 'Successfully updated your information');
+        return redirect()->action('TutorProfileController@index')->with('success', 'Successfully updated your information');
         //return view('profile.show', array('user' => Auth::user()));
 
         //return $request->all();
@@ -76,7 +79,9 @@ class personalInformationController extends Controller
      */
     public function show($id)
     {
-        //
+        $info = PersonalInfo::where('id', $id)->first();
+        //return $areas;
+        return view('personalinformation..edit', array('user' => Auth::user()))->with('info', $info);
     }
 
     /**
@@ -87,7 +92,7 @@ class personalInformationController extends Controller
      */
     public function edit($id)
     {
-        //
+       //
     }
 
     /**

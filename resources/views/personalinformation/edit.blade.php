@@ -65,13 +65,13 @@
                                                 <div class="form-group">
                                                     <label for="example-date-input" class="col-md-4 control-label">Date Of Birth:</label>
                                                     <div class="col-md-6">
-                                                        <input class="form-control" type="date" name="bod" id="example-date-input">
+                                                        <input class="form-control" type="date" name="bod" id="example-date-input" value="{{$info->bod}}">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="barth" class="col-md-4 control-label">Blood Group:</label>
                                                     <div class="col-md-6">
-                                                        <select name="blood" class="form-control" id="barth">
+                                                        <select name="blood" class="form-control" id="barth" value={{$info->blood}}>
                                                             <option value="">Select</option>
                                                             <option value="1">A+</option>
                                                             <option value="2">B+</option>
@@ -158,7 +158,7 @@
                                     <a href="{{route('profile.index')}}" class="list-group-item list-group-item-action"><i class="fa fa-user"></i>&nbsp;My Profile</a>
                                     <a href="{{route('userphoto.create')}}" class="list-group-item list-group-item-action"><i class="fa fa-camera"></i>&nbsp;My Photo</a>
                                     <a href="{{route('personalinformation.create')}}" class="list-group-item list-group-item-action"><i class="fa fa-info"></i>&nbsp; Personal Inforemation</a>
-                                    <a href="{{route('academic.create')}}" class="list-group-item list-group-item-action"><i class="fa fa-book"></i>&nbsp; Academic Inforemation</a>
+                                    <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-book"></i>&nbsp; Academic Inforemation</a>
                                     <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-info"></i>&nbsp; Tution Related Inforemation</a>
                                     <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-edit"></i>&nbsp; Change Password</a>
                                 </div>

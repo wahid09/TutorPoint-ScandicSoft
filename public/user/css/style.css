@@ -3980,3 +3980,9 @@ text-align: left;
 .reg{
     margin-top: 10px;
 }
+.profile-small-text {
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 5px;
+    margin-top: 12px;
+}

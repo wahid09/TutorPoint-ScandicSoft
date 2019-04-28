@@ -3,31 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Model\user\Education;
-use App\Model\user\PersonalInfo;
 use Auth;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class TutorProfileController extends Controller
+class EducationController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
     {
-        $info = PersonalInfo::where('user_id','=',Auth::id())->get()->first();
-        $edu = Education::where('user_id','=',Auth::id())->get()->first();
-        //return $infos;
-        return view('profile.show', array('user' => Auth::user()))
-                                                 ->with('info', $info)
-                                                 ->with('edu', $edu)
-                                                 ;
+        //
     }
 
     /**
@@ -37,7 +26,7 @@ class TutorProfileController extends Controller
      */
     public function create()
     {
-        //
+        return view('academic.academic', array('user' => Auth::user()));
     }
 
     /**
@@ -48,7 +37,32 @@ class TutorProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'education_lavel' => 'required',
+            'major' => 'required',
+            'institute_name' => 'required',
+            'result' => 'required',
+            'grade' => 'required',
+            'passing_year' => 'required',
+            'achievement' => 'required',
+        ]);
+
+        $info = new Education;
+
+        $info->education_lavel= $request->education_lavel;
+        $info->major= $request->major;
+        $info->institute_name= $request->institute_name;
+        $info->result= $request->result;
+        $info->grade= $request->grade;
+        $info->passing_year = Carbon::parse($request->passing_year)->format('y-m-d');
+        $info->achievement= $request->achievement;
+        $info->user_id = Auth::user()->id;
+
+        $info->save();
+
+        return redirect()->action('TutorProfileController@index')->with('success', 'Successfully updated your information');
+
+        //return $request->all();
     }
 
     /**

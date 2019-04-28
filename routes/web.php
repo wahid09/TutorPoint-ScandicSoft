@@ -45,5 +45,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('profile', 'TutorProfileController');
 Route::resource('userphoto', 'UserPhotoController');
 Route::resource('personalinformation', 'personalInformationController');
+Route::resource('academic', 'EducationController');
+Route::resource('tution', 'TutionController');
 Route::get('verify/{token}', 'verifyController@verify')->name('verify');
 

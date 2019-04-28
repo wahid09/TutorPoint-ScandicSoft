@@ -35,8 +35,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="col-md-12 u-profile">
-                                            <img src="/uploads/avatars/{{$user->avatar}}" alt="user-image" class="u-image-small">
-                                            <p class="u-image-small-text">My Profile</p>
+                                            <p class="profile-small-text">Update Your Last Education Status</p>
                                         </div>
                                     </div>
 
@@ -58,78 +57,56 @@
                                         @include('includes.error')
                                         <!-- Tutor Personal information update -->
                                         <div class="tutor-profile">
-                                            <form class="form-horizontal" method="POST" action="{{route('personalinformation.store')}}">
+                                            <form class="form-horizontal" method="POST" action="{{route('academic.store')}}">
                                                 {{ csrf_field() }}
 
                                                 <!---->
                                                 <div class="form-group">
-                                                    <label for="example-date-input" class="col-md-4 control-label">Date Of Birth:</label>
+                                                    <label for="example-date-input" class="col-md-4 control-label">Education Lavel:</label>
                                                     <div class="col-md-6">
-                                                        <input class="form-control" type="date" name="bod" id="example-date-input">
+                                                        <input class="form-control" type="text" name="education_lavel" id="example-date-input" placeholder="ex. B.SC(Engg) in Computer Secience & Engineering">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="barth" class="col-md-4 control-label">Blood Group:</label>
+                                                    <label for="barth" class="col-md-4 control-label">Subject/Major:</label>
                                                     <div class="col-md-6">
-                                                        <select name="blood" class="form-control" id="barth">
-                                                            <option value="">Select</option>
-                                                            <option value="1">A+</option>
-                                                            <option value="2">B+</option>
-                                                            <option value="3">AB+</option>
-                                                        </select>
-                                                        <label class="container">
-                                                            <input type="checkbox" name="interest" value="1">
-                                                            <span class="checkmark">Intersted to donate blood.</span>
-                                                        </label>
+                                                        <input class="form-control" type="text" name="major" id="example-date-input" placeholder="Enter Your Degree">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="gender" class="col-md-4 control-label">Gender:</label>
+                                                    <label for="gender" class="col-md-4 control-label">Institute Name:</label>
                                                     <div class="col-md-6">
-                                                        <select name="sex" class="form-control" id="gender">
-                                                            <option value="">Select</option>
-                                                            <option value="1">male</option>
-                                                            <option value="2">Female</option>
-                                                        </select>
+                                                        <input class="form-control" type="text" name="institute_name" id="example-date-input" placeholder="Enter Your Institute Name">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="mstatus" class="col-md-4 control-label">Marital Status:</label>
+                                                    <label for="mstatus" class="col-md-4 control-label">Result:</label>
                                                     <div class="col-md-6">
-                                                        <select name="maritalstatus" class="form-control" id="mstatus">
+                                                        <select name="result" class="form-control" id="mstatus">
                                                             <option value="">Select</option>
-                                                            <option value="1">Married</option>
-                                                            <option value="2">Unmarried</option>
+                                                            <option value="1">First Division</option>
+                                                            <option value="2">Second Division</option>
+                                                            <option value="2">Third Division</option>
+                                                            <option value="2">Grade</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="religion" class="col-md-4 control-label">Religion:</label>
+                                                    <label for="religion" class="col-md-4 control-label">Marks/Grade:</label>
                                                     <div class="col-md-6">
-                                                        <select name="religion" class="form-control" id="religion">
-                                                            <option value="">Select</option>
-                                                            <option value="1">Islam</option>
-                                                            <option value="2">Hindu</option>
-                                                            <option value="3">Other</option>
-                                                        </select>
+                                                        <input class="form-control" type="text" name="grade" id="example-date-input" placeholder="Enter Your Obtained Marks/Grade">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="example-date-input" class="col-md-4 control-label">Present Address:</label>
+                                                    <label for="example-date-input" class="col-md-4 control-label">Passing Year:</label>
                                                     <div class="col-md-6">
-                                                        <input class="form-control" type="text" name="address" id="example-date-input">
+                                                        <input class="form-control" type="text" name="passing_year" id="example-date-input">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="mob" class="col-md-4 control-label">Mobile:</label>
+                                                    <label for="example-date-input" class="col-md-4 control-label">Achievement:</label>
                                                     <div class="col-md-6">
-                                                        <input class="form-control" id="mob" maxlength="11" name="phone" size="11" type="tel" value="" placeholder="Enter your mobile number">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="example-date-input" class="col-md-4 control-label">Describe Yourself/Experiance:</label>
-                                                    <div class="col-md-6">
-                                                        <textarea name="experiance" rows="5" cols="6" class="form-control"></textarea>
+                                                        <textarea name="achievement" rows="5" cols="6" class="form-control"></textarea>
                                                     </div>
                                                 </div>
 
@@ -159,7 +136,7 @@
                                     <a href="{{route('userphoto.create')}}" class="list-group-item list-group-item-action"><i class="fa fa-camera"></i>&nbsp;My Photo</a>
                                     <a href="{{route('personalinformation.create')}}" class="list-group-item list-group-item-action"><i class="fa fa-info"></i>&nbsp; Personal Inforemation</a>
                                     <a href="{{route('academic.create')}}" class="list-group-item list-group-item-action"><i class="fa fa-book"></i>&nbsp; Academic Inforemation</a>
-                                    <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-info"></i>&nbsp; Tution Related Inforemation</a>
+                                    <a href="{{route('tution.create')}}" class="list-group-item list-group-item-action"><i class="fa fa-info"></i>&nbsp; Tution Related Inforemation</a>
                                     <a href="#" class="list-group-item list-group-item-action"><i class="fa fa-edit"></i>&nbsp; Change Password</a>
                                 </div>
                             </div>

@@ -2,32 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\user\Education;
-use App\Model\user\PersonalInfo;
-use Auth;
 use Illuminate\Http\Request;
+use Auth;
 
-class TutorProfileController extends Controller
+class TutionController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
     public function index()
     {
-        $info = PersonalInfo::where('user_id','=',Auth::id())->get()->first();
-        $edu = Education::where('user_id','=',Auth::id())->get()->first();
-        //return $infos;
-        return view('profile.show', array('user' => Auth::user()))
-                                                 ->with('info', $info)
-                                                 ->with('edu', $edu)
-                                                 ;
+        //
     }
 
     /**
@@ -37,7 +24,7 @@ class TutorProfileController extends Controller
      */
     public function create()
     {
-        //
+        return view('tution.tution', array('user' => Auth::user()));
     }
 
     /**
@@ -48,7 +35,7 @@ class TutorProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //
     }
 
     /**
