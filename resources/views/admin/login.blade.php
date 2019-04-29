@@ -1,79 +1,92 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin | Login</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="{{asset('admin/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{asset('admin/bower_components/font-awesome/css/font-awesome.min.css')}}">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="{{asset('admin/bower_components/Ionicons/css/ionicons.min.css')}}">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('admin/dist/css/AdminLTE.min.css')}}">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="{{asset('admin/plugins/iCheck/square/blue.css')}}">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Admin | Login</title>
+    <!-- Favicon-->
+    <link rel="icon" href="{{asset('admin/favicon.ico')}}" type="image/x-icon">
 
-  <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Core Css -->
+    <link href="{{asset('admin/plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+
+    <!-- Waves Effect Css -->
+    <link href="{{asset('admin/plugins/node-waves/waves.css')}}" rel="stylesheet" />
+
+    <!-- Animation Css -->
+    <link href="{{asset('admin/plugins/animate-css/animate.css')}}" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
 </head>
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>Login</a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
-    @include('includes/mesagess')
 
-    <form action="{{route('admin.login')}}" method="post">
-      {{ csrf_field() }}
-      <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email" name="email">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="password">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> Remember Me
-            </label>
-          </div>
+<body class="login-page">
+    <div class="login-box">
+        <div class="logo">
+            <a href="javascript:void(0);">Admin<b>Login</b></a>
+            <small>Admin Login For TutorPoint</small>
+            @include('includes.error')
         </div>
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+        <div class="card">
+            <div class="body">
+                <form id="sign_in" method="POST" action="{{route('admin.login')}}">
+                  {{csrf_field()}}
+                    <div class="msg">Sign in to start your session</div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="material-icons">lock</i>
+                        </span>
+                        <div class="form-line">
+                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8 p-t-5">
+                            <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink">
+                            <label for="rememberme">Remember Me</label>
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block bg-pink waves-effect" type="submit">SIGN IN</button>
+                        </div>
+                    </div>
+                    <div class="row m-t-15 m-b--20">
+                        <div class="col-xs-6 align-right">
+                            <a href="forgot-password.html">Forgot Password?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <!-- /.col -->
-      </div>
-    </form>
-  </div>
-  <!-- /.login-box-body -->
-</div>
-<!-- /.login-box -->
+    </div>
 
-<!-- jQuery 3 -->
-<script src="{{asset('admin/bower_components/jquery/dist/jquery.min.js')}}"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="{{asset('admin/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-<!-- iCheck -->
-<script src="{{asset('admin/plugins/iCheck/icheck.min.js')}}"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
-    });
-  });
-</script>
+    <!-- Jquery Core Js -->
+    <script src="{{asset('admin/plugins/jquery/jquery.min.js')}}"></script>
+
+    <!-- Bootstrap Core Js -->
+    <script src="{{asset('admin/plugins/bootstrap/js/bootstrap.js')}}"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="{{asset('admin/plugins/node-waves/waves.js')}}"></script>
+
+    <!-- Validation Plugin Js -->
+    <script src="{{asset('admin/plugins/jquery-validation/jquery.validate.js')}}"></script>
+
+    <!-- Custom Js -->
+    <script src="{{asset('admin/js/admin.js')}}"></script>
+    <script src="{{asset('admin/js/pages/examples/sign-in.js')}}"></script>
 </body>
+
 </html>
