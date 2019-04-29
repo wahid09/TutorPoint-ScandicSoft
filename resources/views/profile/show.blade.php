@@ -73,6 +73,60 @@
                                             <p><strong>Email:</strong>&nbsp;{{Auth::user()->email}}</p>
                                             <a href="{{route('personalinformation.show', $info->id)}}" class="pull-right"><i class="fa fa-edit"></i>Edit info</a>
                                         </div>
+                                        <div class="row">
+                                        <div class="col-md-12">
+                                            <h4 class="t-info">Tuition Info:</h4>
+                                            <table id="table1">
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="2" class="c-text">Expected Minimum Salary:</td>
+                                                        <td colspan="6" class="c2-text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="c-text">Current Status for Tuition:</td>
+                                                        <td colspan="6" class="c2-text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="c-text">Days per week:</td>
+                                                        <td colspan="6" class="c2-text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="c-text">Preffered Tutoring Style:</td>
+                                                        <td colspan="6" class="c2-text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="c-text">Place of Learning:</td>
+                                                        <td colspan="6" class="c2-text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="c-text">Extra Facilities:</td>
+                                                        <td colspan="6" class="c2-text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="c-text">Preferred Medium Of:</td>
+                                                        <td colspan="6" class="c2-text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="c-text">Education:</td>
+                                                        <td colspan="6" class="c2-text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="c-text">Preferred Classes:</td>
+                                                        <td colspan="6" class="c2-text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="c-text">Preferred Subjects:</td>
+                                                        <td colspan="6" class="c2-text"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" class="c-text">Preferred Areas to Teach:</td>
+                                                        <td colspan="6" class="c2-text"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a href="#" class="pull-right"><i class="fa fa-edit"></i>Edit info</a>
+                                        </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -155,9 +155,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="gender" class="col-md-4 control-label">Preferred District to Teach:</label>
+                                                    <label for="gender" class="col-md-4 control-label">Preferred Subjects:</label>
                                                     <div class="col-md-6">
-                                                        <select class="form-control" type="text" name="district" id="gender">
+                                                        <select class="form-control" type="text" name="preferred_subject" id="gender">
                                                             <option value="">SELECT</option>
                                                             <option value="1">3 days</option>
                                                             <option value="2">4 days</option>
@@ -183,8 +183,8 @@
                                                             <option value="">Select</option>
                                                             <option value="1">First Division</option>
                                                             <option value="2">Second Division</option>
-                                                            <option value="2">Third Division</option>
-                                                            <option value="2">Grade</option>
+                                                            <option value="3">Third Division</option>
+                                                            <option value="4">Grade</option>
                                                         </select>
                                                     </div>
                                                 </div>

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Model\user\Tutioninfo;
 use Auth;
+use Illuminate\Http\Request;
 
 class TutionController extends Controller
 {
@@ -35,7 +36,40 @@ class TutionController extends Controller
      */
     public function store(Request $request)
     {
-       //
+    	$this->validate($request, [
+    		'degree' => 'required',
+    		'salary' => 'required',
+    		'status' => 'required',
+    		'days' => 'required',
+    		'tution_style' => 'required',
+    		'learning_place' => 'required',
+    		'tution_approach' => 'required',
+    		'medium' => 'required',
+    		'preferred_class' => 'required',
+    		'preferred_subject' => 'required',
+    		'district' => 'required',
+    	]);
+
+    	$info = new Tutioninfo;
+
+    	$info->degree = $request->degree;
+    	$info->salary = $request->salary;
+    	$info->status = $request->status;
+    	$info->days = $request->days;
+    	$info->tution_style = $request->tution_style;
+    	$info->learning_place = $request->learning_place;
+    	$info->tution_approach = $request->tution_approach;
+    	$info->medium = $request->medium;
+    	$info->preferred_class = $request->preferred_class;
+    	$info->preferred_subject = $request->preferred_subject;
+    	$info->district = $request->district;
+    	$info->area = $request->area;
+    	$info->user_id = Auth::user()->id;
+
+    	$info->save();
+
+    	return redirect()->action('TutorProfileController@index')->with('success', 'Successfully updated your information');
+       //return $info;
     }
 
     /**
