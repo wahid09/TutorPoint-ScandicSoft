@@ -34,6 +34,8 @@ Route::group(['namespace' => 'Admin'], function(){
 	Route::resource('admin/salary', 'salaryCntroller');
 
 	Route::resource('admin/gender', 'genderController');
+	Route::resource('admin/user', 'AdminController');
+	Route::resource('admin/role', 'RoleController');
 	//Admin Login route
 	Route::get('admin-login', 'Auth\LoginController@showLoginForm')->name('admin.login');
 	Route::post('admin-login', 'Auth\LoginController@login');

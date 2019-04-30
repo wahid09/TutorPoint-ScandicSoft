@@ -173,18 +173,18 @@
                     </li>
                     <!--  // Other information-->
                     <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">assignment</i>
-                            <span>User</span>
+                        <a href="{{route('user.index')}}">
+                            <i class="material-icons">
+account_circle
+</i><span>User</span>
                         </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="pages/forms/basic-form-elements.html">Add User</a>
-                            </li>
-                            <li>
-                                <a href="pages/forms/basic-form-elements.html">Manage User</a>
-                            </li>
-                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{route('role.index')}}">
+                            <i class="material-icons">
+                            redeem
+                            </i><span>Role</span>
+                        </a>
                     </li>
                 </ul>
             </div>

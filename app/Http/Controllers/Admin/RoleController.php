@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Model\user\gender;
+use App\Model\admin\Role;
 use Illuminate\Http\Request;
 
-class genderController extends Controller
+class RoleController extends Controller
 {
     public function __construct(){
         $this->middleware('auth:admin');
@@ -18,8 +18,8 @@ class genderController extends Controller
      */
     public function index()
     {
-        $genders = gender::all();
-        return view('admin.gender.show', compact('genders'));
+        $roles = Role::all();
+        return view('admin.role.show', compact('roles'));
     }
 
     /**
@@ -29,7 +29,7 @@ class genderController extends Controller
      */
     public function create()
     {
-        return view('admin.gender.gender');
+        return view('admin.role.role');
     }
 
     /**
@@ -41,15 +41,15 @@ class genderController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'gender' => 'required',
+            'name' => 'required|max:50|unique:roles',
         ]);
 
-        $gender = new gender;
-        $gender->gender = $request->gender;
-        $gender->save();
+        $info = new Role;
 
+        $info->name = $request->name;
+        $info->save();
 
-        return redirect(route('gender.index'));
+        return redirect(route('role.index'))->with('success', 'Admins Role are added successfully');
     }
 
     /**

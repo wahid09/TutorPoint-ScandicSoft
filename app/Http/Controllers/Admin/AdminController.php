@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Model\user\gender;
+use App\Model\admin\Admin;
 use Illuminate\Http\Request;
 
-class genderController extends Controller
+class AdminController extends Controller
 {
     public function __construct(){
         $this->middleware('auth:admin');
@@ -18,8 +18,8 @@ class genderController extends Controller
      */
     public function index()
     {
-        $genders = gender::all();
-        return view('admin.gender.show', compact('genders'));
+        $users = Admin::all();
+        return view('admin.user.show', compact('users'));
     }
 
     /**
@@ -29,7 +29,7 @@ class genderController extends Controller
      */
     public function create()
     {
-        return view('admin.gender.gender');
+        return view('admin.user.user');
     }
 
     /**
@@ -40,16 +40,7 @@ class genderController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'gender' => 'required',
-        ]);
-
-        $gender = new gender;
-        $gender->gender = $request->gender;
-        $gender->save();
-
-
-        return redirect(route('gender.index'));
+        //
     }
 
     /**
