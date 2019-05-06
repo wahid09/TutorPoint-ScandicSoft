@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Model\admin\Admin;
-use App\Model\admin\Role;
+use App\Model\admin\Permission;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class PermissionController extends Controller
 {
     public function __construct(){
         $this->middleware('auth:admin');
@@ -19,8 +18,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $users = Admin::all();
-        return view('admin.user.show', compact('users'));
+        $permissions = Permission::all();
+        return view('admin.permission.show', compact('permissions'));
     }
 
     /**
@@ -30,8 +29,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        $roles = Role::all();
-        return view('admin.user.user', compact('roles'));
+        return view('admin.permission.permission');
     }
 
     /**
@@ -42,7 +40,16 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        $this->validate($request, [
+            'name' => 'required|max:50|unique:permissions'
+        ]);
+
+        $info=new Permission;
+
+        $info->name = $request->name;
+        $info->save();
+        return redirect(route('permission.index'))->with('success', 'Permission are added successfully');
+        //return $request->all();
     }
 
     /**
@@ -64,7 +71,8 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        $permission = Permission::where('id', $id)->first();
+        return view('admin.permission.edit', compact('permission'));
     }
 
     /**
@@ -76,7 +84,15 @@ class AdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|max:50|unique:permissions'
+        ]);
+
+        $info=Permission::find($id);
+
+        $info->name = $request->name;
+        $info->save();
+        return redirect(route('permission.index'))->with('success', 'Permission are Update successfully');
     }
 
     /**
@@ -87,6 +103,8 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Permission::where('id', $id)->delete();
+        return redirect(route('permission.index'))->with('success', 'Permission are Deleted successfully');
+        //return redirect()->back();
     }
 }
