@@ -59,9 +59,18 @@
                                             <td>{{$loop->index +1}}</td>
                                             <td>{{$role->name}}</td>
                                             <td>
-                                                <a href="" class="btn btn-success">Edit</i></a>
+                                                <a href="{{route('role.edit', $role->id)}}" class="btn btn-success">Edit</i></a>
     
-                                                <a href="" class="btn btn-danger">Delete</a>
+                                                <form id="delete-form-{{$role->id}}" method="post" action="{{route('role.destroy', $role->id)}}" style="display: none;">
+                                                    {{csrf_field()}}
+                                                    {{method_field('DELETE')}}
+                                                </form>
+                                                <a href="#" onclick="if(confirm('Are you sure, You want to delete this??'))
+                                                {
+                                                    event.preventDefault();document.getElementById('delete-form-{{$role->id}}').submit();
+                                                }else{
+                                                    event.preventDefault();
+                                                }" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                         @endforeach

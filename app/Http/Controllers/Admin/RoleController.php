@@ -71,7 +71,8 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $role = Role::where('id', $id)->first();
+        return view('admin.role.edit', compact('role'));
     }
 
     /**
@@ -83,7 +84,16 @@ class RoleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|max:50|unique:roles',
+        ]);
+
+        $info = Role::find($id);
+
+        $info->name = $request->name;
+        $info->save();
+
+        return redirect(route('role.index'))->with('success', 'Admins Role are added successfully');
     }
 
     /**
@@ -94,6 +104,7 @@ class RoleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Role::where('id', $id)->delete();
+        return redirect()->back();
     }
 }
