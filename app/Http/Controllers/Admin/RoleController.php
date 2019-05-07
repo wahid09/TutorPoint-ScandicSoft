@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Model\admin\Permission;
 use App\Model\admin\Role;
 use Illuminate\Http\Request;
 
@@ -29,7 +30,8 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('admin.role.role');
+        $permissions = Permission::all();
+        return view('admin.role.role', compact('permissions'));
     }
 
     /**
@@ -40,6 +42,7 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
+        //return $request->all();
         $this->validate($request, [
             'name' => 'required|max:50|unique:roles',
         ]);
@@ -48,6 +51,7 @@ class RoleController extends Controller
 
         $info->name = $request->name;
         $info->save();
+        $info->permissions()->sync($request->permission);
 
         return redirect(route('role.index'))->with('success', 'Admins Role are added successfully');
     }
@@ -72,7 +76,9 @@ class RoleController extends Controller
     public function edit($id)
     {
         $role = Role::where('id', $id)->first();
-        return view('admin.role.edit', compact('role'));
+        $permissions = Permission::all();
+        //return $permissions;
+        return view('admin.role.edit', compact('role', 'permissions'));
     }
 
     /**
@@ -85,13 +91,15 @@ class RoleController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'name' => 'required|max:50|unique:roles',
+            'name' => 'required|max:50',
         ]);
 
         $info = Role::find($id);
 
         $info->name = $request->name;
         $info->save();
+
+        $info->permissions()->sync($request->permission);
 
         return redirect(route('role.index'))->with('success', 'Admins Role are added successfully');
     }
